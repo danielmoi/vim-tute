@@ -4,5 +4,7 @@
 # Other
 .bash_history
 .vim
-.local/share/nvim/shada*
-.local/share/nvim/swap*
+
+*.shada
+*.swap
+*.netrwhist
