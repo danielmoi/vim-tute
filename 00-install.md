@@ -57,6 +57,9 @@ This means that if we type
 And then `<TAB>` Vim will show us all the variables that it has access to.
 We can see `MYVIMRC` in that list.
 
+----
+# Vim vs Neovim
+
 
 
 ----

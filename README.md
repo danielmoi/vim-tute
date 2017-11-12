@@ -4,8 +4,10 @@
 - Install Vim
 - Navigation
 - Show line Numbers 
-- Mode-aware Cursor
 - File Manager (NERDTree)
+- Color Scheme
+- Mode-aware Cursor
+
 
 ## Run Vim inside of Docker
 ```
