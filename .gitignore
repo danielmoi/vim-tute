@@ -5,6 +5,8 @@
 .bash_history
 .vim
 
+.local/share/nvim/shada/main.shada
+.local/share/nvim/shada/main.swap
 *.shada
 *.swap
 *.netrwhist
