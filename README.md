@@ -11,18 +11,22 @@
 
 ## Run Vim inside of Docker
 ```
-docker run -it -v "$(pwd)":/root -w /root danielmoi/alpine-neovim bash
+docker run -it -v "$(pwd)":/root -w /root danielmoi/alpine-neovim:0.1 bash
 
 vim
 ```
 
 ## Vimrc files
+TODO: Make separate ~/.vimrc symlinks
 ```
 # Lesson 0
 ln -si .vimrc-00-blank .vimrc
 
 # Lesson 1
-ln -si .vimrc-01-line-numbers .vimrc
+ln -si .vimrc-00-line-numbers .vimrc
+
+# Lesson 2
+
 
 
 
