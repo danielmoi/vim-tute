@@ -5,7 +5,7 @@ Welcome to navigation!
 Let's learn how to move around in Vim using only keystrokes!
 
 
-## By character
+### By character
 ```
 Down  j
 Up    k
@@ -38,23 +38,25 @@ Yet another way:
 
 
 
-## By word
+### By word
 ```
 w         next word
 b         previous word     Back one word
 
-NB. these will take us to the beginning of the word
 ```
+NB. these will take us to the beginning of the word
 
-## By page
+### By page
 ```
 CTRL-F    Forward one page
 CTRL-B    Back one page
 ```
 
-## Top / bottom
+### Top / bottom
 ```
 gg        Top of file
 G         End of file
 ```
 
+
+|-
