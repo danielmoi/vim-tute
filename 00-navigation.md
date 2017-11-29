@@ -27,8 +27,8 @@ LEFT     h       l   RIGHT
 ```
 
 
-```
 Yet another way:
+```
                       UP
                       |
     LEFT --   h   j   k   l  -- RIGHT
@@ -40,8 +40,8 @@ Yet another way:
 
 ## By word
 ```
-w       next word
-b       previous word     Back one word
+w         next word
+b         previous word     Back one word
 
 NB. these will take us to the beginning of the word
 ```
@@ -53,6 +53,8 @@ CTRL-B    Back one page
 ```
 
 ## Top / bottom
-gg    Top of file
-G     End of file
+```
+gg        Top of file
+G         End of file
+```
 
