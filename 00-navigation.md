@@ -39,12 +39,12 @@ Yet another way:
 
 
 ### By word
+NB. these will take us to the beginning of the word
 ```
 w         next word
 b         previous word     Back one word
 
 ```
-NB. these will take us to the beginning of the word
 
 ### By page
 ```
