@@ -33,10 +33,6 @@ Then, type `q`, which is shorthand for `quit`.
 
 Then, press the `Enter` key to execute our command.
 
-This is notated like so:
-```
-:q
-```
 
 And that's it!
 
@@ -57,4 +53,16 @@ If you are using the `alpine-neovim` docker image referenced in the `README`, yo
 NVIM 0.1.7
 ```
 
+## Notation
 
+We will follow a notation for command line instructions.
+
+Pressing
+1. `:`, to access the Command Line, followed by
+2. `q`, the command (`quit` in this case), followed by
+3. `<Enter>` key (to execute our command),
+
+is notated like so:
+```
+:q
+```
