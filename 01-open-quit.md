@@ -13,6 +13,8 @@ The solid white rectangle at the top left is your cursor.
 
 The lines beginning with a `~` are tilde lines. These indicate lines that are
 NOT in the file.
+To quote the help guide, the `~` lines indicate that the end of the buffer has
+been reached.
 
 The file name is displayed in the message line. We haven't named this file we've
 just opened, so `[No Name]` is displayed.

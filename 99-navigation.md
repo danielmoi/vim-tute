@@ -59,3 +59,8 @@ G         End of file
 ```
 
 
+### Exercise
+Open up `03-nav-doc.md` and navigate around the maze.
+
+
+
