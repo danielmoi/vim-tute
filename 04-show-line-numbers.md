@@ -21,6 +21,8 @@ Let's turn line numbers on!
 :set number
 ```
 
+Hello line numbers!
+
 
 ----
 ## Extra notes

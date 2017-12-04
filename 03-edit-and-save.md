@@ -86,16 +86,24 @@ $ ls
 
 We should see our `hello.md` in the directory contents!
 
----
+
+## Save and quit
+We can combine the `write` and `quit` commands to achieve this
+```
+:wq
+```
+
+## Force quit (without saving)
+If we are completely sure we want to close a file without saving, we can do
+this:
+```
+:q!
+```
+
+
+
+--------------------------------------------------------------------------------
 ## Exercise
 Make another file `icecream.md`, write a flavor of icecream in it, save, and
 exit.
-We will use this file in a later lesson.
 
---------------------------------------------------------------------------------
-## Notes
-Note that we can also use tab completion
-```
-$ vim h<TAB>
-$ vim hello.md
-```
