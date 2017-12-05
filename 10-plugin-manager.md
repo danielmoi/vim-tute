@@ -2,7 +2,7 @@
 
 Plugins are a way to extend the base functionality of Vim.
 
-vim-plug is a "minimalist Vim plugin manager"
+`vim-plug` is a "minimalist Vim plugin manager"
 https://github.com/junegunn/vim-plug
 
 ## Installation
@@ -27,13 +27,9 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 ```
 
-Now we need to save.
+Now we need to save and reload vim with our new config
 ```
 :w
-```
-
-And let's reload vim with our new config
-```
 :so %
 ```
 
@@ -47,14 +43,28 @@ We get this message:
 No plugin to install
 ```
 
-(We can all use tab-completion with `Plug<TAB>` to see the options`
+--------------------------------------------------------------------------------
+## Extra
+
+### Further options
+Tab-completion works with plugins too.
+
+```
+:Plug<TAB>
+```
+
+We will see a list of options like:
+```
+Plug PlugClean PlugDiff
+```
+
+Let's run `PlugStatus` using tab-completion:
+
+```
+:Plug<TAB                     Shows a list of all commands starting with Plug>
+          S                   Shows a list of all commands starting with PlugS
+           <TAB><TAB>         Tab across to PlugStatus
+                     <CR>     Execute PlugStatus
+```
 
 
-
-### Comments
-Comments start with a single " in .vimrc
-
-
-### Tags
-plugins plugin-manager
-comments
