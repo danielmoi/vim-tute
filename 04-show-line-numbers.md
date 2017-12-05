@@ -1,9 +1,19 @@
 # Show line numbers (using options)
 
 Let's configure Vim to display some line numbers. This, like a lot of features,
-comes for free with Vim, but requires an opt-in - via configuration.
+comes for free with Vim, but requires the user to opt-in. This is accomplished
+by configuring Vim.
 
-We can do this temporarily by changing an OPTION.
+
+Let's turn line numbers on!
+
+```
+:set number
+```
+
+Hello line numbers!
+
+What we just did was change an OPTION.
 
 Options are internal variables in Vim. They are used for specific features in
 Vim. There are 3 forms of options:
@@ -14,15 +24,6 @@ Vim. There are 3 forms of options:
 We do this inside COMMAND-LINE MODE.
 
 Displaying line numbers is stored in the option `number`.
-
-Let's turn line numbers on!
-
-```
-:set number
-```
-
-Hello line numbers!
-
 
 ----
 ## Extra notes
