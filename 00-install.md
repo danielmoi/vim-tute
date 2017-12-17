@@ -97,6 +97,6 @@ installation
 
 [dotfiles]: A common [convention](https://en.wikipedia.org/wiki/Configuration_file) for configuration files is to have "rc" in their names.
 
-[1]: HELLA What's going on here
+[^1]: HELLA What's going on here
 
 There is also a convention for these files to be prefixed with a period ".", which hides these files (or directories) from being listed, hence their name: "dotfiles".
