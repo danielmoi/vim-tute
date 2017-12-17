@@ -27,7 +27,8 @@ $ alias "vim=nvim"
 ```
 
 # Configuration file {#dotfiles}
-The configuration file for Vim is `.vimrc` [dotfiles][dotfiles]
+
+The configuration file for Vim is `.vimrc` [dotfiles][dotfiles] [1][1]
 
 Neovim supports something called XDG configuration, which means that the configuration directory
 lives inside of the `.config` directory in your home directory. is Setup .vimrc to be config file
@@ -95,4 +96,7 @@ variables
 installation
 
 [dotfiles]: A common [convention](https://en.wikipedia.org/wiki/Configuration_file) for configuration files is to have "rc" in their names.
+
+[1]: HELLA What's going on here
+
 There is also a convention for these files to be prefixed with a period ".", which hides these files (or directories) from being listed, hence their name: "dotfiles".
