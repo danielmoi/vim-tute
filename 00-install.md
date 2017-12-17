@@ -26,33 +26,6 @@ This is also optional, but I found it really useful. This allows us to type `vim
 $ alias "vim=nvim"
 ```
 
-# Configuration file {#dotfiles}
-
-The configuration file for Vim is `.vimrc` [dotfiles][dotfiles] [Is there something wrong][^1]
-
-Neovim supports something called XDG configuration, which means that the configuration directory
-lives inside of the `.config` directory in your home directory. is Setup .vimrc to be config file
-
-
-- Default user config directory is now `~/.config/nvim/`
-- and the default "vimrc" location is now `~/.config/nvim/init.vim`
-
-
-The default config file location is
-
-```
-~/.config/nvim/init.vim
-```
-
-Add this to `init.vim`
-```
-source ~/.vimrc
-```
-
-
-Create `.vimrc` to hold configuration
-This needs to be in your root directory
-
 ----
 ## Notes
 
@@ -72,7 +45,6 @@ We should see this:
 /root/.config/nvim/init.vim
 ```
 
-And inside of `init.vim`, we have told Vim to go and find `.vimrc` in our root directory!
 
 ----
 We can use _tab completion_
@@ -84,19 +56,3 @@ This means that if we type
 And then `<TAB>` Vim will show us all the variables that it has access to.
 We can see `MYVIMRC` in that list.
 
-----
-# Vim vs Neovim
-
-
-
-----
-## Tags
-tab-completion
-variables
-installation
-
-[dotfiles]: A common [convention](https://en.wikipedia.org/wiki/Configuration_file) for configuration files is to have "rc" in their names.
-
-[^1]: HELLA What's going on here
-
-There is also a convention for these files to be prefixed with a period ".", which hides these files (or directories) from being listed, hence their name: "dotfiles".
