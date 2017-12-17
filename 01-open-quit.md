@@ -1,71 +1,93 @@
 # Open and Quit
 
 
-### Open Vim
-From the command line,
+## 1. Open Vim
+Okay, ready? Let's open Vim!
+
+In your terminal, simply type `vim` :
 ```
 $ vim
 ```
 
 ---
 ### Editor features
-![Vim welcome screen](screenshots/start-screen.png)
+Vim should have loaded, looking like this:
+![Vim welcome screen](screenshots/start-screen-0.png)
 
-The solid white rectangle at the top left is your cursor.
+I know, things are looking CRAZY! Let's go through some main features:
+1. Cursor. This is the solid white rectangle at the top left.
 
-The lines beginning with a `~` are "tilde lines". These indicate lines that are
+1. Tilde lines. These are the lines beginning with a `~`. These indicate lines that are
 NOT in the file. To quote the [help guide](05-using-help.md), tilde lines
-> indicate that the end of the buffer has been reached.
+    > indicate that the end of the buffer has been reached.
 
-The file name is displayed in the message line. We haven't named this file we've
+1. File name. This is displayed in the message line. We haven't named this file we've
 just opened, so `[No Name]` is displayed.
 
 
 ---
-### Close Vim
-Let's quit Vim.
+## 2. Close Vim
+Now, let's quit Vim.
 
 We need to use 3 keystrokes to exit.
 
-First, type `:` to enter command mode.
-You will notice that the cursor at the top left has moved to the bottom left,
-preceded by the `:` that we typed. This indicates that we are in command
-mode.
+First, type `:` to enter Command Mode.
+
+```
+:
+```
+You should see something like this:
+![Vim welcome screen](screenshots/command-line-0.png)
+
+You will notice that the cursor (white block) at the top left has moved to the bottom left,
+preceded by the `:` that we just typed. This indicates that we are in Command Mode.
 
 Then, type `q`, which is shorthand for `quit`.
+```
+:q
+```
+![Vim welcome screen](screenshots/command-line-quit.png)
 
 Then, press the `Enter` key to execute our command.
 
 
+
 And that's it!
 
-We're back to the command line!
+We have exited Vim, and we're back to the command line!
+
+```
+$
+```
 
 
 ----
 ## Notes
 
 ### Check version of Vim
-We can check the version of Vim from the command line.
+We can check the version of Vim that we are using:
 ```
 $ vim --version
 ```
 
-If you are using the `alpine-neovim` docker image referenced in the `README`, you will see (among other details):
+You will probably see something like this:
 ```
-NVIM 0.1.7
+NVIM v0.2.0
+... (more information here)
 ```
+indicating that we are using version 0.2.0
 
+----
 ## Notation
 
-We will follow a notation for command line instructions.
+We will follow a notation for commands to be type in Vim's Command Mode.
 
-Pressing
+This:
+```
+:q
+```
+indicates these steps:
 1. `:`, to access the Command Line, followed by
 2. `q`, the command (`quit` in this case), followed by
 3. `<Enter>` key (to execute our command),
 
-is notated like so:
-```
-:q
-```
