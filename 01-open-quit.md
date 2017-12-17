@@ -14,7 +14,9 @@ $ vim
 Vim should have loaded, looking like this:
 ![Vim welcome screen](screenshots/start-screen-0.png)
 
-I know, things are looking CRAZY! Let's go through some main features:
+I know, things are looking CRAZY!
+
+Let's go through some main features:
 1. Cursor. This is the solid white rectangle at the top left.
 
 1. Tilde lines. These are the lines beginning with a `~`. These indicate lines that are
@@ -23,6 +25,9 @@ NOT in the file. To quote the [help guide](05-using-help.md), tilde lines
 
 1. File name. This is displayed in the message line. We haven't named this file we've
 just opened, so `[No Name]` is displayed.
+
+1. Current Mode. We are currently in Normal Mode. We will discuss Modes further below. Also, note that the word "Normal" is not displayed anywhere.
+
 
 
 ---
@@ -62,7 +67,8 @@ $
 
 
 ----
-## Notes
+## Modes
+Ok.
 
 ### Check version of Vim
 We can check the version of Vim that we are using:
