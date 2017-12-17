@@ -9,6 +9,8 @@ $ vim
 
 ---
 ### Editor features
+![Vim welcome screen](screenshots/start-screen.png)
+
 The solid white rectangle at the top left is your cursor.
 
 The lines beginning with a `~` are tilde lines. These indicate lines that are

@@ -4,10 +4,14 @@
 Vim comes pre-installed in most distributions of Linux and on MacOS. However, I would recommend using Neovim instead.
 
 
-Neovim is a refactor of Vim. It offers significant improvements with regards to the plugin API, codebase, developer community. There is a good discussion [here](https://geoff.greer.fm/2015/01/15/why-neovim-is-better-than-vim/).
+Neovim is a refactor of Vim. It offers significant improvements with regards to the plugin API,
+ codebase, and developer community. There is a good discussion [here](https://geoff.greer.fm/2015/01/15/why-neovim-is-better-than-vim/).
 
 
-For me, I found out about Neovim after running into a lot of problems getting Copy and Paste with the global clipboard to work properly.
+For me, I found out about Neovim after running into a lot of problems getting Copy and Paste to
+work properly on MacOS (some issues with my version of Vim not using the global clipboard).
+
+
 
 ## Install Neovim
 
@@ -26,4 +30,5 @@ This is also optional, but I found it really useful. This allows us to type `vim
 $ alias "vim=nvim"
 ```
 
-
+Note: the rest of this tutorial, in general, will use "Vim" even though we will be using Neovim.
+However, the procedures covered in this tutorial will work interchangeably between Vim and Neovim.
