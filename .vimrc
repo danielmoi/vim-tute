@@ -1,1 +1,0 @@
-.vimrc-00-blank
