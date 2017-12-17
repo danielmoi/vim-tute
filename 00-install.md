@@ -1,7 +1,14 @@
-# Install
+# Setup
 
-- Install neovim
+## Install Neovim
+This is optional.
 
+However, this is definitely recommended, especially if you are using a Mac.
+
+[Here's a good discussion about the benefits of using NeoVim over Vim.](link)
+
+
+Follow this guide to install Neovim:
 https://github.com/neovim/neovim/wiki/Installing-Neovim
 
 - Alias vim to nvim

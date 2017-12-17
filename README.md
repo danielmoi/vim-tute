@@ -1,5 +1,15 @@
 # Vim Tutorial
 
+Welcome to Vim Tute!
+
+Learning to use Vim can be difficult, but this tutorial will take you through the first steps.
+
+## Pros
+- An editor available on any machine
+- Shortcuts to vastly increase your productivity
+
+
+[Let's get started!](00-install.md)
 ## Outline
 - Install Vim
 - Navigation
