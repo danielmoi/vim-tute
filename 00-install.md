@@ -21,38 +21,9 @@ There are more installation instructions here:
 https://github.com/neovim/neovim/wiki/Installing-Neovim
 
 ## Alias vim to nvim
-This is also optional, but I found it really useful. This allows us to type `vim` to open Neovim.
+This is also optional, but I found it really useful. This allows us to type `vim` (instead of `nvim`) to open Neovim.
 ```
 $ alias "vim=nvim"
 ```
 
-----
-## Notes
-
-We can check that this has all worked
-Open vim
-```
-$ vim
-```
-
-Print out (to the vim command line) the location of the vimrc configuration file
-```
-:echo $MYVIMRC
-```
-
-We should see this:
-```
-/root/.config/nvim/init.vim
-```
-
-
-----
-We can use _tab completion_
-
-This means that if we type
-```
-:echo $
-```
-And then `<TAB>` Vim will show us all the variables that it has access to.
-We can see `MYVIMRC` in that list.
 

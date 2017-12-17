@@ -136,7 +136,19 @@ If you are using the `alpine-neovim` image, we will see
 
 --------------------------------------------------------------------------------
 ### Abbreviations
-Instead of this:
+A lot of commands in Vim can be abbreviated. For example, instead of `echo`, we can do `ec`, (`e` is for `edit`).
+
+So, instead of:
+```
+:echo $MYVIMRC
+```
+
+We can do:
+```
+:ec $MYVIMRC
+```
+
+Similarly, instead of:
 ```
 :edit $MYVIMRC
 ```
@@ -146,23 +158,48 @@ We can do:
 :e $MYVIMRC
 ```
 
-Because `:e` is shorthand for `:edit`
-
-
 --------------------------------------------------------------------------------
 ### Tab completion
-We can do this:
+Vim offers tab auto-completion. By pressing `<TAB>`, Vim will show us all commands/files/variables
+starting with that initial string of characters.
+
+If we do
 ```
 :e<TAB>
 ```
 
-Vim will autofill `e` with the first command that starts with an `e`. Each
-subsequent `<TAB>` will show the next command starting with `e`.
+Vim will provide a list of COMMANDS that begin with `e`.
 
-We can cycle backwards with `<SHIFT-TAB>`.
+We can cycle forwards with `<TAB>`, and backwards with `<SHIFT-TAB>`.
 
-Once the desired command is filled, we can progress forward with `<SPACE>`, or we
-can execute immediately with `<CR>`.
+Once the desired command is selected, we can:
+1. extend the command (add additional characters) with `<SPACE>`, or
+2. execute immediately with `<CR>`.
+
+Similarly, if we do
+```
+:edit <TAB>
+```
+
+(noting the space after `edit`), Vim will provide us a list of FILES that can be edited.
+
+
+Similarly, if we do
+```
+:echo $<TAB>
+```
+
+Vim will provide a list of VARIABLES that begin with `$` (ie. all of them).
+
+--------------------------------------------------------------------------------
+### Comments
+As with code, it can be helpful to annotate your `.vimrc` with comments. You may forget what
+certain lines are doing, and others reading the file might be interested too!
+
+Comments in `.vimrc` begin with a `"`, and there is NO matching `"` at the end of the line:
+```
+" my comment
+```
 
 --------------------------------------------------------------------------------
 ### No terminal beeps
@@ -173,14 +210,10 @@ we can turn that off.
 Just like with line numbers, we need to make changes to certain OPTIONS.
 
 Add this to `/.vimrc`:
-
-
 ```
 " turn off all beeping and window flashing
 set noeb vb t_vb=
 ```
-Note: it can be helpful to annotate your `.vimrc` with comments (`"` that is NOT
-    closed with a matching `"`)
 
 `eb` is the option for error bells, we turn this off.
 
