@@ -1,22 +1,41 @@
 # Setup
 
+## Neovim
+Vim comes pre-installed in most distributions of Linux and on MacOS. However, I would recommend using Neovim instead.
+
+
+Neovim is a refactor of Vim. It offers significant improvements with regards to the plugin API, codebase, developer community. There is a good discussion [here](https://geoff.greer.fm/2015/01/15/why-neovim-is-better-than-vim/).
+
+
+For me, I found out about Neovim after running into a lot of problems getting Copy and Paste with the global clipboard to work properly.
+
 ## Install Neovim
-This is optional.
 
-However, this is definitely recommended, especially if you are using a Mac.
+On MacOS, simply use Homebrew:
+```
+$ brew install neovim
+```
 
-[Here's a good discussion about the benefits of using NeoVim over Vim.](link)
+There are more installation instructions here:
 
-
-Follow this guide to install Neovim:
 https://github.com/neovim/neovim/wiki/Installing-Neovim
 
-- Alias vim to nvim
+## Alias vim to nvim
+This is also optional, but I found it really useful. This allows us to type `vim` to open Neovim.
 ```
-alias "vim=nvim"
+$ alias "vim=nvim"
 ```
 
-- Setup .vimrc to be config file
+## Configuration file
+The configuration file for Vim is `.vimrc` ![1][1].
+
+Neovim supports something called XDG configuration, which means that the configuration directory
+lives inside of the `.config` directory in your home directory. is Setup .vimrc to be config file
+
+
+- Default user config directory is now `~/.config/nvim/`
+- and the default "vimrc" location is now `~/.config/nvim/init.vim`
+
 
 The default config file location is
 
@@ -74,3 +93,6 @@ We can see `MYVIMRC` in that list.
 tab-completion
 variables
 installation
+
+[1]: A common [convention](https://en.wikipedia.org/wiki/Configuration_file) for configuration files is to have "rc" in their names.
+There is also a convention for these files to be prefixed with a period ".", which hides these files (or directories) from being listed, hence their name: "dotfiles".
