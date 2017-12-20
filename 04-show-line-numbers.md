@@ -1,8 +1,7 @@
-# Show line numbers (using options)
+# Customization with options
 
 Let's configure Vim to display some line numbers. This, like a lot of features,
-comes for free with Vim, but requires the user to opt-in. This is accomplished
-by configuring Vim.
+comes for free with Vim, but requires the user to opt-in.
 
 
 Let's turn line numbers on!
@@ -15,22 +14,21 @@ Hello line numbers!
 
 What we just did was change an OPTION.
 
-Options are internal variables in Vim. They are used for specific features in
-Vim. There are 3 forms of options:
+Options are internal variables in Vim.
+
+There are 3 forms of options:
 1. boolean (toggle option),
 2. number (numeric value)
 3. string (string value)
 
-We do this inside COMMAND-LINE MODE.
+Displaying line numbers is stored in the option `number`, a boolean option.
 
-Displaying line numbers is stored in the option `number`.
-
+----
 ----
 ## Extra notes
 
-### Option - Inspect value
-Let's INSPECT what value this option has at present.
-We have to use the `?` modifier.
+## Option - Inspect value
+We can INSPECT the current value of an option with the `?` modifier.
 
 ```
 :set number?
@@ -38,12 +36,13 @@ We have to use the `?` modifier.
 
 We will see
 ```
-nonumber
+number
 ```
 
-This makes sense. There are no line numbers being displayed!
+This makes sense - we have just turned line numbers on!
 
-### Option - Set value (boolean option)
+----
+## Option - Set value (boolean option)
 We can toggle the value of a boolean option with the `!` modifier.
 
 ```
@@ -65,12 +64,14 @@ We use set the option to "off" by using the `no` prefix:
 
 Most often, it's easier to use the `?` modifier.
 
-### Option - Set value (number or string option)
-This requires us to use a different option, as the `number` option is a
-boolean option. Let's modify the `background` option. This adjusts the colors to
-suit either a `dark`/`light` background (the 2 values for this option).
+----
+## Option - Set value (number or string option)
+Let's modify the `background` option, an example of a string option.
 
-We provide the value for the option like so:
+This option tells Vim the background color of our terminal. Vim will adjust its default color
+groups to match that background color.
+
+There are 2 valid values: `dark` / `light`.
 
 ```
 :set background=dark
@@ -80,17 +81,19 @@ We provide the value for the option like so:
 :set background=light
 ```
 
-### Option - Reset value
+----
+## Option - Reset value
+We can reset the value of an option with the `&` option.
 ```
 :set number&
 :set background&
 ```
 
 ----
-This is excellent!
+This is excellent! We are able to configure Vim with our personal configuration.
 
-However, one problem is that if we exit Vim, and start Vim again, our line
-numbers and background colors have reset back to their default values.
+However, if we quit and restart Vim, our line numbers have disappeared and the color scheme has
+been reset to default.
 
-The way we fix this is by personalising Vim using a configuration file.
+Let's PERSIST our settings by setting up our [configuration file]().
 
