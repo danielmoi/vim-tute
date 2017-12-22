@@ -21,6 +21,8 @@
 
 * [Cheatsheet](cheatsheet.md)
 
+* [Further Reading](further-reading.md)
+
 
 
 Don't make the numbers consecutive? Just 00-name?
