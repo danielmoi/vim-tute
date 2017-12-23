@@ -32,35 +32,44 @@ Note that this is the same as:
 ```
 
 
+----
 ## `init.vim`
-Let's open that our configuration file:
+Let's open that our configuration file.
+
+If you are already in Vim:
 ```
 :edit $MYVIMRC
 ```
 
-That was equivalent to doing this from the command line:
+Otherwise, from the command line:
 ```
 vim ~/.config/nvim/init.vim
 ```
 
-Let's add this line inside `init.vim`:
+We need to add these lines inside `init.vim` (from Neovim [documentation](https://neovim.io/doc/user/nvim.html)):
 ```
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath = &runtimepath
 source ~/.vimrc
 ```
 
 As a reminder, these are the steps needed:
 1. enter Insert Mode, with `i`,
-2. type those characters: `source ~/.vimrc`
+2. paste in those lines of configuration
 3. return to Normal Mode, with `<Esc>`
 4. save file, with `:w` and `<Enter>`
 
 What this means is that when Vim starts, it will load
-1. `/$HOME/.config/nvim/init.vim`, which will tell it to also load
+1. `/$HOME/.config/nvim/init.vim`, and our `source` command will tell it to also load
 2. `/$HOME/.vimrc`
 
+After saving, your screen should look similar to this:
 
---------------------------------------------------------------------------------
-## Edit `.vimrc`
+![init.vim](screenshots/init-vim.png)
+
+
+----
+## `.vimrc`
 Now, let's edit our `.vimrc`:
 ```
 :edit ~/.vimrc
@@ -74,11 +83,18 @@ set number
 set background=dark
 ```
 
-## Load configuration
-After saving the file, nothing has changed. This is because these changes
-haven't been loaded into Vim.
+After saving, your screen should look like this:
+![vimrc](screenshots/vimrc.png)
 
-We need to `source` these changes.
+## Reload
+You may have noticed that nothing has changed - there are no line numbers, and the color scheme
+has not changed.
+
+This is because these changes haven't been loaded into Vim.
+
+We need to "tell" Vim to use these settings, ie. the current configuration file (`.vimrc`).
+
+This is done with the `source` (abbreviated as `so`) command.
 
 ```
 :so ~/.vimrc
@@ -93,13 +109,14 @@ We could also do this:
 ```
 :so %
 ```
-Where `%` refers to the current file (Vim will then load the configuration from
-the current file)
+`%` refers to the current file.
 
 ---
 Voila!
 
 We should now see line numbers and a different editor background color.
+
+![Vim reloaded](screenshots/vim-reloaded.png)
 
 Quit Vim and start Vim again to confirm that our first customizations have
 persisted.
@@ -108,13 +125,11 @@ persisted.
 
 
 --------------------------------------------------------------------------------
-
-
 --------------------------------------------------------------------------------
-### Abbreviations
+## Abbreviations
 A lot of commands in Vim can be abbreviated.
 
-For example, instead of `echo`, we can do `ec`, (`e` is for `edit`).
+For example, instead of `echo`, we can do `ec`.
 
 So, instead of:
 ```
@@ -126,7 +141,9 @@ We can do:
 :ec $MYVIMRC
 ```
 
-Similarly, instead of:
+Similarly, instead of `edit`, we can do `e`:
+
+So, instead of:
 ```
 :edit $MYVIMRC
 ```
@@ -137,7 +154,7 @@ We can do:
 ```
 
 --------------------------------------------------------------------------------
-### Tab completion
+## Tab completion
 Vim offers tab auto-completion. By pressing `<TAB>`, Vim will show us all commands/files/variables
 starting with that initial string of characters.
 
@@ -151,7 +168,7 @@ Vim will provide a list of COMMANDS that begin with `e`.
 We can cycle forwards with `<TAB>`, and backwards with `<SHIFT-TAB>`.
 
 Once the desired command is selected, we can:
-1. extend the command (add additional characters) with `<SPACE>`, or
+1. extend the command (and keep typing additional characters) with `<SPACE>`, or
 2. execute immediately with `<Enter>`.
 
 Similarly, if we do
@@ -170,7 +187,7 @@ Similarly, if we do
 Vim will provide a list of VARIABLES that begin with `$` (ie. all of them).
 
 --------------------------------------------------------------------------------
-### Comments
+## Comments
 As with code, it can be helpful to annotate your `.vimrc` with comments. You may forget what
 certain lines are doing, and others reading the file might be interested too!
 
@@ -179,8 +196,12 @@ Comments in `.vimrc` begin with a `"`, and there is NO matching `"` at the end o
 " my comment
 ```
 
+Let's add some comments to our `.vimrc`:
+
+![Comments in vimrc](screenshots/vimrc-comments.png)
+
 --------------------------------------------------------------------------------
-### No terminal beeps
+## No terminal beeps
 
 If Vim has been making beeps (eg. when the cursor reaches the end of the line),
 we can turn that off.
@@ -189,7 +210,7 @@ Just like with line numbers, we need to make changes to certain OPTIONS.
 
 Add this to `/.vimrc`:
 ```
-" turn off all beeping and window flashing
+" Turn off all beeping and window flashing
 set noeb vb t_vb=
 ```
 
@@ -201,13 +222,21 @@ set noeb vb t_vb=
 (which may be the reason why we have to turn visual bells on to achieve all
 bells off...)
 
+![Vimrc No Beeps](screenshots/vimrc-no-beeps.png)
 
-
-### Dotfiles
+---
+## Dotfiles
 A common [convention](https://en.wikipedia.org/wiki/Configuration_file) for configuration files
 is to have "rc" in their names.
 
-There is also a convention for these files to be prefixed with a period ".", which hides these files (or directories) from being listed, hence their name: "dotfiles".
+There is also a convention for these files to be prefixed with a period ".".
+
+Files and directories beginning with a `.` are hidden from being listed, hence their name: "dotfiles".
+
+
+So, `.vimrc`
+- is a configuration file for Vim
+- is a hidden file, a "dotfile"
 
 So now you know why the configuration file for Vim is named `.vimrc`!
 
