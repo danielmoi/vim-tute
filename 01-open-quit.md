@@ -12,7 +12,7 @@ $ vim
 ---
 ### Editor features
 Vim should have loaded, looking like this:
-![Vim welcome screen](screenshots/start-screen-0.png)
+![Vim welcome screen](screenshots/start-screen.png)
 
 I know... WHAT IS GOING ON??!
 
@@ -42,7 +42,7 @@ First, type `:` to enter Command Mode.
 :
 ```
 You should see something like this:
-![Vim welcome screen](screenshots/command-line-0.png)
+![Vim welcome screen](screenshots/command-line.png)
 
 You will notice that the cursor (white block) at the top left has moved to the bottom left,
 preceded by the `:` that we just typed. This indicates that we are in Command Mode.
@@ -88,6 +88,13 @@ This may seem very confusing - why would this be useful?! - but it will make sen
 about _*separation of concerns*_ - grouping "insert" commands (such as inserting text) for Insert
 Mode, and keeping them separate from "normal" commands for Normal Mode (such as scrolling to
 a particular line).
+
+Here are the main modes in Vim:
+1. Normal Mode
+2. Insert Mode
+3. Command Mode
+4. Visual Mode
+
 
 ----
 ## Check version of Vim

@@ -1,2 +1,2 @@
-Hello there.
-Happy days.
+Hello there!
+Happy days with Vim.
