@@ -32,3 +32,16 @@ $ alias "vim=nvim"
 
 Note: the rest of this tutorial, in general, will use "Vim" even though we will be using Neovim.
 However, the procedures covered in this tutorial will work interchangeably between Vim and Neovim.
+
+
+----
+## Map Caps Lock to Escape
+I recommend mapping the `<CAPSLOCK>` key to `<ESC>` for 2 reasons.
+- the `<ESC>` key is how we return to Normal Mode in Vim. As such it's like a reset / "stop" key in Vim - you'll use it a lot
+- the `<CAPSLOCK>` key is not really used for any thing useful
+
+
+On MacOS, open System Preferences > Keyboard > Modifier Keys...
+
+Then, change the mapping for Caps Lock key to Escape.
+

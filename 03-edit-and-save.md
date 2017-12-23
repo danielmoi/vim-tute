@@ -107,15 +107,4 @@ this:
 Make another file `icecream.md`, write a flavor of icecream in it, save, and
 exit.
 
-----
-## Map Caps Lock to Escape
-I recommend mapping the `<CAPSLOCK>` key to `<ESC>` for 2 reasons.
-- the `<ESC>` key is how we return to Normal Mode in Vim. As such it's like a reset / "stop" key in Vim - you'll use it a lot
-- the `<CAPSLOCK>` key is not really used for any thing useful
-
-
-On MacOS, open System Preferences > Keyboard > Modifier Keys...
-
-Then, change the mapping for Caps Lock key to Escape.
-
 
