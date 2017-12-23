@@ -64,6 +64,6 @@ By the end of this tutorial you will be able to use Vim fairly comfortably - tic
 
 
 ---
-[Let's get started!](00-install.md)
+[Let's get started!](00-setup.md)
 
 

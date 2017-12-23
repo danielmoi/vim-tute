@@ -36,9 +36,9 @@ However, the procedures covered in this tutorial will work interchangeably betwe
 
 ----
 ## Map Caps Lock to Escape
-I recommend mapping the `<CAPSLOCK>` key to `<ESC>` for 2 reasons.
-- the `<ESC>` key is how we return to Normal Mode in Vim. As such it's like a reset / "stop" key in Vim - you'll use it a lot
-- the `<CAPSLOCK>` key is not really used for any thing useful
+I recommend mapping the Caps Lock key to the Escape key for 2 reasons.
+1. the Escape key is how we return to Normal Mode in Vim. As such it's like a reset / "stop" key in Vim - you'll use it a LOT, and it's much easier to reach the Caps Lock key than the Escape key!
+2. the Caps Lock key is not really used for any thing useful
 
 
 On MacOS, open System Preferences > Keyboard > Modifier Keys...
