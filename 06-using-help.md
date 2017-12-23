@@ -9,8 +9,28 @@ This can be abbreviated:
 ```
 :he
 ```
+![Help screen](screenshots/vim-help.png)
 
-We navigate inside the help documents using regular Vim motions, (such as `j` for next line, `<CTRL-F>` for page down, and so on).
+We navigate inside the help documents using regular Vim motions,
+(such as `j` for next line, `<CTRL-F>` for page down, and so on).
+
+Note also that help opens in a separate WINDOW - the existing file is still there!
+
+This can be visualized a bit easier if we extend the height of our terminal:
+![Vim taller](screenshots/vim-taller.png)
+
+We can make the help file the ONLY window visible with `only`:
+
+```
+:only
+```
+
+We can also combine commands in the Command Line using the `|` operator:
+```
+:he | only
+```
+
+![Vim Help as only window](screenshots/vim-only.png)
 
 ----
 ## Help for specific topics
@@ -30,8 +50,11 @@ string, by pressing `<CTRL-D>`:
 :he w<CTRL-D>
 ```
 
-That's quite the list. Note that there are separate help articles for `w` and
-`:w` - `w` is the motion command, whereas `:w` is the save command.
+That's quite the list!
+
+Note that there are separate help articles for `w` and `:w`
+- `w` is the motion command, whereas
+- `:w` is the save command.
 
 Alternatively, we can use tab completion:
 ```
