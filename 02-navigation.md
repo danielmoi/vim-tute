@@ -6,7 +6,7 @@ Let's learn how to move around in Vim using only keystrokes!
 
 NB. these commands are called Motion commands, and are for use in Normal Mode.
 
-Remember, pressing `<ESC>` will always switch the current mode to Normal Mode.
+Remember, pressing `<Esc>` will always switch the current mode to Normal Mode.
 
 ---
 ## By character

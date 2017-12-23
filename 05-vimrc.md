@@ -1,10 +1,11 @@
-# Configure Vim
+# Vimrc
 
-Let's set up Vim to load with a custom configuration. We will be able to setup
-options (and a slew of other things) to be loaded each time Vim opens.
+Let's set up Vim to load with a configuration file.
+
+This will allow us to set options (and a slew of other things) to be loaded each time Vim opens.
 
 --------------------------------------------------------------------------------
-## Configuration file Part 1
+## Configuration directory
 Whilst the configuration file for Vim lives at `~/.vimrc`, Neovim uses `~/.config/nvim/init.vim`.
 
 This is because Neovim supports something called XDG configuration - it uses the configuration
@@ -15,20 +16,23 @@ That is,
 - and the default "vimrc" location is now `~/.config/nvim/init.vim`
 
 
-## Configuration file Part 2
-We can also ask Vim where its configuration file is stored.
+We can ask Vim the location of its configuration file:
 
 ```
 :echo $MYVIMRC
 ```
 We will see something like this:
 ```
-/<PATH>/.config/nvim/init.vim
+/Users/danielmoi/.config/nvim/init.vim
 ```
 
-`<PATH>` is the absolute path to your HOME directory (which is stored as `$HOME`).
+Note that this is the same as:
+```
+~/.config/nvim/init.vim
+```
 
-## Edit `init.vim`
+
+## `init.vim`
 Let's open that our configuration file:
 ```
 :edit $MYVIMRC
@@ -47,8 +51,8 @@ source ~/.vimrc
 As a reminder, these are the steps needed:
 1. enter Insert Mode, with `i`,
 2. type those characters: `source ~/.vimrc`
-3. return to Normal Mode, with `<ESC>`
-4. save file, with `:w`
+3. return to Normal Mode, with `<Esc>`
+4. save file, with `:w` and `<Enter>`
 
 What this means is that when Vim starts, it will load
 1. `/$HOME/.config/nvim/init.vim`, which will tell it to also load
@@ -104,35 +108,13 @@ persisted.
 
 
 --------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-## Environment Variables
-`$HOME` is a environment variable - a variable that is accessible anywhere on
-your machine.
-
-We can inspect the value of it inside Vim:
-
-```
-:echo $HOME
-```
-We can check it from the terminal:
-```
-$ echo $HOME
-```
-
-For my machine (a Mac), it shows:
-```
-/Users/danielmoi
-```
-
-If you are using the `alpine-neovim` image, we will see
-```
-/root
-```
 
 
 --------------------------------------------------------------------------------
 ### Abbreviations
-A lot of commands in Vim can be abbreviated. For example, instead of `echo`, we can do `ec`, (`e` is for `edit`).
+A lot of commands in Vim can be abbreviated.
+
+For example, instead of `echo`, we can do `ec`, (`e` is for `edit`).
 
 So, instead of:
 ```
@@ -170,7 +152,7 @@ We can cycle forwards with `<TAB>`, and backwards with `<SHIFT-TAB>`.
 
 Once the desired command is selected, we can:
 1. extend the command (add additional characters) with `<SPACE>`, or
-2. execute immediately with `<CR>`.
+2. execute immediately with `<Enter>`.
 
 Similarly, if we do
 ```

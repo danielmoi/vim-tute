@@ -263,7 +263,7 @@ function! plug#end()
     for [mode, map_prefix, key_prefix] in
           \ [['i', '<C-O>', ''], ['n', '', ''], ['v', '', 'gv'], ['o', '', '']]
       execute printf(
-      \ '%snoremap <silent> %s %s:<C-U>call <SID>lod_map(%s, %s, %s, "%s")<CR>',
+      \ '%snoremap <silent> %s %s:<C-U>call <SID>lod_map(%s, %s, %s, "%s")<Enter>',
       \ mode, map, map_prefix, string(map), string(names), mode != 'i', key_prefix)
     endfor
   endfor
@@ -720,13 +720,13 @@ function! s:switch_out(...)
 endfunction
 
 function! s:finish_bindings()
-  nnoremap <silent> <buffer> R  :call <SID>retry()<cr>
-  nnoremap <silent> <buffer> D  :PlugDiff<cr>
-  nnoremap <silent> <buffer> S  :PlugStatus<cr>
-  nnoremap <silent> <buffer> U  :call <SID>status_update()<cr>
-  xnoremap <silent> <buffer> U  :call <SID>status_update()<cr>
-  nnoremap <silent> <buffer> ]] :silent! call <SID>section('')<cr>
-  nnoremap <silent> <buffer> [[ :silent! call <SID>section('b')<cr>
+  nnoremap <silent> <buffer> R  :call <SID>retry()<Enter>
+  nnoremap <silent> <buffer> D  :PlugDiff<Enter>
+  nnoremap <silent> <buffer> S  :PlugStatus<Enter>
+  nnoremap <silent> <buffer> U  :call <SID>status_update()<Enter>
+  xnoremap <silent> <buffer> U  :call <SID>status_update()<Enter>
+  nnoremap <silent> <buffer> ]] :silent! call <SID>section('')<Enter>
+  nnoremap <silent> <buffer> [[ :silent! call <SID>section('b')<Enter>
 endfunction
 
 function! s:prepare(...)
@@ -750,7 +750,7 @@ function! s:prepare(...)
     call s:new_window()
   endif
 
-  nnoremap <silent> <buffer> q  :if b:plug_preview==1<bar>pc<bar>endif<bar>bd<cr>
+  nnoremap <silent> <buffer> q  :if b:plug_preview==1<bar>pc<bar>endif<bar>bd<Enter>
   if a:0 == 0
     call s:finish_bindings()
   endif
@@ -759,7 +759,7 @@ function! s:prepare(...)
   let s:plug_buf = winbufnr(0)
   call s:assign_name()
 
-  for k in ['<cr>', 'L', 'o', 'X', 'd', 'dd']
+  for k in ['<Enter>', 'L', 'o', 'X', 'd', 'dd']
     execute 'silent! unmap <buffer>' k
   endfor
   setlocal buftype=nofile bufhidden=wipe nobuflisted nolist noswapfile nowrap cursorline modifiable nospell
@@ -803,7 +803,7 @@ function! s:bang(cmd, ...)
       let cmd = batchfile
     endif
     let g:_plug_bang = (s:is_win && has('gui_running') ? 'silent ' : '').'!'.escape(cmd, '#!%')
-    execute "normal! :execute g:_plug_bang\<cr>\<cr>"
+    execute "normal! :execute g:_plug_bang\<Enter>\<Enter>"
   finally
     unlet g:_plug_bang
     let [&shell, &shellcmdflag, &shellredir] = [sh, shellcmdflag, shrd]
@@ -2167,9 +2167,9 @@ function! s:clean(force)
       call s:delete([6, line('$')], 1)
     else
       call setline(4, 'Cancelled.')
-      nnoremap <silent> <buffer> d :set opfunc=<sid>delete_op<cr>g@
+      nnoremap <silent> <buffer> d :set opfunc=<sid>delete_op<Enter>g@
       nmap     <silent> <buffer> dd d_
-      xnoremap <silent> <buffer> d :<c-u>call <sid>delete_op(visualmode(), 1)<cr>
+      xnoremap <silent> <buffer> d :<c-u>call <sid>delete_op(visualmode(), 1)<Enter>
       echo 'Delete the lines (d{motion}) to delete the corresponding directories'
     endif
   endif
@@ -2278,8 +2278,8 @@ function! s:status()
   setlocal nomodifiable
   if unloaded
     echo "Press 'L' on each line to load plugin, or 'U' to update"
-    nnoremap <silent> <buffer> L :call <SID>status_load(line('.'))<cr>
-    xnoremap <silent> <buffer> L :call <SID>status_load(line('.'))<cr>
+    nnoremap <silent> <buffer> L :call <SID>status_load(line('.'))<Enter>
+    xnoremap <silent> <buffer> L :call <SID>status_load(line('.'))<Enter>
   end
 endfunction
 
@@ -2368,7 +2368,7 @@ function! s:preview_commit()
     endif
   endtry
   setlocal nomodifiable
-  nnoremap <silent> <buffer> q :q<cr>
+  nnoremap <silent> <buffer> q :q<Enter>
   wincmd p
 endfunction
 
@@ -2426,11 +2426,11 @@ function! s:diff()
         \ . (cnts[1] ? printf(' %d plugin(s) have pending updates.', cnts[1]) : ''))
 
   if cnts[0] || cnts[1]
-    nnoremap <silent> <buffer> <cr> :silent! call <SID>preview_commit()<cr>
-    nnoremap <silent> <buffer> o    :silent! call <SID>preview_commit()<cr>
+    nnoremap <silent> <buffer> <Enter> :silent! call <SID>preview_commit()<Enter>
+    nnoremap <silent> <buffer> o    :silent! call <SID>preview_commit()<Enter>
   endif
   if cnts[0]
-    nnoremap <silent> <buffer> X :call <SID>revert()<cr>
+    nnoremap <silent> <buffer> X :call <SID>revert()<Enter>
     echo "Press 'X' on each block to revert the update"
   endif
   normal! gg

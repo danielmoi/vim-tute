@@ -64,7 +64,7 @@ Let's run `PlugStatus` using tab-completion:
 :Plug<TAB                     Shows a list of all commands starting with Plug>
           S                   Shows a list of all commands starting with PlugS
            <TAB><TAB>         Tab across to PlugStatus
-                     <CR>     Execute PlugStatus
+                     <Enter>     Execute PlugStatus
 ```
 
 

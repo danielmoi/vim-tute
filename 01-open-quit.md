@@ -79,7 +79,7 @@ Things are different in Vim, for example:
 
 2. Pressing the `i` key in _Insert Mode_ will insert the "i" character into the file.
 
-3. Pressing the `<ESC>` key will switch the editor back to Normal Mode.
+3. Pressing the `<Esc>` key will switch the editor back to Normal Mode.
 
 This is why when you open Vim and typing "hello" doesn't result in "hello" being displayed on
 the screen!

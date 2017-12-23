@@ -52,7 +52,7 @@ Now let's save our file (write to disk).
 
 First, we need to exit Insert mode, and re-enter Normal mode.
 
-Press `<ESC>`
+Press `<Esc>`
 
 ![Normal Mode](screenshots/edit-text-normal.png)
 
@@ -69,7 +69,7 @@ Enter `w`, which stands for "Write" (save).
 ```
 :w
 ```
-Press `<CR>`
+Press `<Enter>`
 
 
 We should see something like:
