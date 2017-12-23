@@ -1,10 +1,10 @@
 # Summary
 
 * [Part 1](part1-intro.md)
-    * [Installation](00-install.md)
+    * [Setup](00-setup.md)
     * [Open and quit](01-open-quit.md)
     * [Navigation](02-navigation.md)
-    * [Edit and save](03-edit-and-save.md)
+    * [Edit and save](03-edit-save.md)
 
 * [Part 2](part2-intro.md)
     * [Customize](04-configure-vim.md)

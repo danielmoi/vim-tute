@@ -1,19 +1,27 @@
 ## Vimrc files
 TODO: Make separate ~/.vimrc symlinks
+---
+## Overwrite ~/.vimrc with TARGET
 ```
-# Lesson 0
-ln -sf vimrc-00-blank .vimrc
+ln -si ./vimrc-00-blank ~/.vimrc
+```
 
-# Lesson 1
-ln -sf vimrc-00-line-numbers .vimrc
-
-# Lesson 2
+have to do `-sf` on Alpine, because there is `i` option
 
 
 
 
 
 
-# Reset back to blank .vimrc
+
+---
+## Reset back to blank .vimrc
+```
 unlink .vimrc; touch .vimrc
+```
+
+---
+## Restore ~/.vimrc with vimrc in dotfiles
+```
+ln -si ~/.dotfiles/vimrc ~/.vimrc
 ```
