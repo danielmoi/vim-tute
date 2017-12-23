@@ -124,8 +124,7 @@ persisted.
 
 
 
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
+---
 ## Abbreviations
 A lot of commands in Vim can be abbreviated.
 
@@ -153,7 +152,7 @@ We can do:
 :e $MYVIMRC
 ```
 
---------------------------------------------------------------------------------
+----
 ## Tab completion
 Vim offers tab auto-completion. By pressing `<TAB>`, Vim will show us all commands/files/variables
 starting with that initial string of characters.
@@ -186,7 +185,7 @@ Similarly, if we do
 
 Vim will provide a list of VARIABLES that begin with `$` (ie. all of them).
 
---------------------------------------------------------------------------------
+----
 ## Comments
 As with code, it can be helpful to annotate your `.vimrc` with comments. You may forget what
 certain lines are doing, and others reading the file might be interested too!
@@ -200,7 +199,7 @@ Let's add some comments to our `.vimrc`:
 
 ![Comments in vimrc](screenshots/vimrc-comments.png)
 
---------------------------------------------------------------------------------
+----
 ## No terminal beeps
 
 If Vim has been making beeps (eg. when the cursor reaches the end of the line),

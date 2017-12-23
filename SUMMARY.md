@@ -9,12 +9,12 @@
 * Part 2
     * [Options](04-options.md)
     * [Customize](05-vimrc.md)
-    * [Using Help](05-using-help.md)
+    * [Using Help](06-using-help.md)
 
 * Part 3
-    * [Plugin Manager](10-plugin-manager.md)
-    * [Color Theme](11-color-theme.md)
-    * [File Explorer](12-file-explorer.md)
+    * [Plugin Manager](07-plugin-manager.md)
+    * [Color Theme](08-color-theme.md)
+    * [File Explorer](09-file-explorer.md)
 
 * Part 4
     * [Next Steps](99-next-steps.md)
