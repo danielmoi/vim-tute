@@ -1,6 +1,6 @@
 # Setup
 
-## Neovim
+## Vim > Neovim
 Vim comes pre-installed in most distributions of Linux and on MacOS. However, I would recommend using Neovim instead.
 
 
@@ -37,7 +37,7 @@ However, the procedures covered in this tutorial will work interchangeably betwe
 ----
 ## Map Caps Lock to Escape
 I recommend mapping the Caps Lock key to the Escape key for 2 reasons.
-1. the Escape key is how we return to Normal Mode in Vim. As such it's like a reset / "stop" key in Vim - you'll use it a LOT, and it's much easier to reach the Caps Lock key than the Escape key!
+1. the Escape key is how we return to Normal Mode in Vim (more on Modes later on). As such it's like a reset / "stop" key in Vim - you'll use it a LOT, and it's much easier to reach the Caps Lock key than the Escape key!
 2. the Caps Lock key is not really used for any thing useful
 
 

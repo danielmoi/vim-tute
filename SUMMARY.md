@@ -7,8 +7,8 @@
     * [Edit and save](03-edit-save.md)
 
 * Part 2
-    * [Customize](04-configure-vim.md)
-    * [Show line numbers](04-show-line-numbers.md)
+    * [Options](04-options.md)
+    * [Customize](05-vimrc.md)
     * [Using Help](05-using-help.md)
 
 * Part 3

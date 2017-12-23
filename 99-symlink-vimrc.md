@@ -3,6 +3,8 @@ TODO: Make separate ~/.vimrc symlinks
 ---
 ## Overwrite ~/.vimrc with TARGET
 ```
+# ln SOURCE TARGET
+
 ln -si ./vimrc-00-blank ~/.vimrc
 ```
 
