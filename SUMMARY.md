@@ -8,7 +8,7 @@
 
 * Part 2
     * [Options](04-options.md)
-    * [Customize](05-vimrc.md)
+    * [.vimrc](05-vimrc.md)
     * [Using Help](06-using-help.md)
 
 * Part 3
@@ -17,6 +17,7 @@
     * [File Explorer](09-file-explorer.md)
 
 * Part 4
+    * [Customization](10-customization.md)
     * [Next Steps](99-next-steps.md)
 
 * [Cheatsheet](cheatsheet.md)

@@ -1,0 +1,43 @@
+" === PLUGINS =========================================
+call plug#begin('~/.vim/plugged')
+
+" List of plugins here
+" :w to save this file
+" :so % to reload vim with this config file
+" :PlugInstall to install plugins
+
+Plug 'altercation/vim-colors-solarized'
+Plug 'scrooloose/nerdtree'
+
+call plug#end()
+
+
+" === SETTINGS ========================================
+" Use the comma key as the leader
+let mapleader = ","
+
+" Show line numbers
+set number
+
+" Use color scheme for a dark terminal background
+set background=dark
+
+" Turn off all beeping and window flashing
+set noeb vb t_vb=
+
+" Use Solarized color theme
+colorscheme solarized
+
+" === NERDTree ==================================
+" Toggle NERDTreeToggle
+map <C-n> :NERDTreeToggle<Enter>
+noremap <Leader>n :NERDTreeToggle<Enter>
+
+" Focus NERDTree
+noremap <Leader>f :NERDTreeFind<Enter>
+
+" show hidden files
+let NERDTreeShowHidden=1
+
+" close vim if NERDTree is the only thing left
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
