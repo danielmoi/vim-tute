@@ -96,3 +96,11 @@ As a reminder, here is a mapping of the keystrokes and their effect:
 
 
 We can close that status window by pressing `q` (abbreviation for quit).
+
+---
+## Tidy `.vimrc`
+Let's add some comments and compartmentalize our `.vimrc`
+
+![Vimrc Tidy](screenshots/vim-plug-tidy.png)
+
+
