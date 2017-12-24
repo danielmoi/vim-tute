@@ -14,7 +14,7 @@ This can be abbreviated:
 We navigate inside the help documents using regular Vim motions,
 (such as `j` for next line, `<CTRL-F>` for page down, and so on).
 
-Note also that help opens in a separate WINDOW - the existing file is still there!
+Note also that help opens in a separate WINDOW - our previous file (`No Name`) is still there!
 
 This can be visualized a bit easier if we extend the height of our terminal:
 ![Vim taller](screenshots/vim-taller.png)
