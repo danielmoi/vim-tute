@@ -6,10 +6,15 @@ call plug#begin('~/.vim/plugged')
 " :so % to reload vim with this config file
 " :PlugInstall to install plugins
 
-
 call plug#end()
 
-" === SETTINGS =======================================
+
+" === SETTINGS ========================================
+" Show line numbers
 set number
 
+" Use color scheme for a dark terminal background
+set background=dark
 
+" Turn off all beeping and window flashing
+set noeb vb t_vb=
