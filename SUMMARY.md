@@ -18,6 +18,8 @@
 
 * Part 4
     * [Customization](10-customization.md)
+    * [Window Switching](11-window-switching.md)
+    * [Moving Lines](12-moving-lines.md)
     * [Next Steps](99-next-steps.md)
 
 * [Cheatsheet](cheatsheet.md)
