@@ -95,17 +95,3 @@ The other things achieved by those settings are explained by their accompanying 
 
 
 
----
-## Your turn!
-The most recent configuration - NERDTree - is a good example of why it's almost time to say
-goodbye!
-
-Those settings provide the configuration to NERDTree that _I_ find useful.
-
-You may think differently!
-
-In fact, if at any stage you found yourself saying "Why
-are we doing this? Wouldn't it be better like this?", then you have ascertained a
-fundamental principle behind Vim.
-
-It's about configuring Vim for your own personal use.

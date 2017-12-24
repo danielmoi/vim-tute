@@ -1,5 +1,6 @@
 # Further Reading
 
+## Cheatsheets
+https://www.cs.oberlin.edu/~kuperman/help/vim/windows.html
 
-
-## Some Vimrcs for inspiration
+## Vimrcs

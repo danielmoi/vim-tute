@@ -8,7 +8,7 @@
 
 * Part 2
     * [Options](04-options.md)
-    * [.vimrc](05-vimrc.md)
+    * [Vimrc](05-vimrc.md)
     * [Using Help](06-using-help.md)
 
 * Part 3
