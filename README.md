@@ -1,5 +1,10 @@
 # Vim Tute
 
+<img alt="Vim Logo" src="images/logo-vim.png" height="60" style="display: block; margin-bottom: 1rem">
+<img alt="Neovim Logo" src="images/logo-neovim.png" height="60" style="display: block; margin-bottom: 1rem">
+
+
+
 Welcome to Vim Tute!
 
 Learning to use Vim can be difficult, but this tutorial will take you through enough steps to be comfortable using Vim.
@@ -67,3 +72,8 @@ By the end of this tutorial you will be able to use Vim fairly comfortably - tic
 [Let's get started!](00-setup.md)
 
 
+---
+## License
+[Apache-2.0](LICENSE.txt)
+
+The Neovim logo by Jason Long is licensed under the Creative Commons Attribution 3.0 Unported License
