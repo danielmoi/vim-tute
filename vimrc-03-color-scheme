@@ -22,4 +22,4 @@ set background=dark
 set noeb vb t_vb=
 
 " Use Solarized color theme
-colorscheme solarized " Use solarized color scheme
+colorscheme solarized
