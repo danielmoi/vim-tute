@@ -1,5 +1,11 @@
 # Setup
 
+## Git repo
+Clone the tutorial repository from https://github.com/danielmoi/vim-tute
+
+There's an [exercises](/exercises) folder that will be referenced in some lessons.
+
+---
 ## Vim > Neovim
 Vim comes pre-installed in most distributions of Linux and on MacOS. However, I would recommend using Neovim instead.
 
@@ -13,6 +19,7 @@ work properly on MacOS (some issues with my version of Vim not using the global 
 
 
 
+---
 ## Install Neovim
 
 On MacOS, simply use Homebrew:
@@ -24,6 +31,7 @@ There are more installation instructions here:
 
 https://github.com/neovim/neovim/wiki/Installing-Neovim
 
+---
 ## Alias vim to nvim
 This is also optional, but I found it really useful. This allows us to type `vim` (instead of `nvim`) to open Neovim.
 ```
