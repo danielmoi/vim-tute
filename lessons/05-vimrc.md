@@ -65,7 +65,7 @@ What this means is that when Vim starts, it will load
 
 After saving, your screen should look similar to this:
 
-![init.vim](screenshots/init-vim.png)
+![init.vim](/screenshots/init-vim.png)
 
 
 ----
@@ -84,7 +84,7 @@ set background=dark
 ```
 
 After saving, your screen should look like this:
-![vimrc](screenshots/vimrc.png)
+![vimrc](/screenshots/vimrc.png)
 
 ## Reload
 You may have noticed that nothing has changed - there are no line numbers, and the color scheme
@@ -116,7 +116,7 @@ Voila!
 
 We should now see line numbers and a different editor background color.
 
-![Vim reloaded](screenshots/vim-reloaded.png)
+![Vim reloaded](/screenshots/vim-reloaded.png)
 
 Quit Vim and start Vim again to confirm that our first customizations have
 persisted.
@@ -197,7 +197,7 @@ Comments in `.vimrc` begin with a `"`, and there is NO matching `"` at the end o
 
 Let's add some comments to our `.vimrc`:
 
-![Comments in vimrc](screenshots/vimrc-comments.png)
+![Comments in vimrc](/screenshots/vimrc-comments.png)
 
 ----
 ## No terminal beeps
@@ -221,7 +221,7 @@ set noeb vb t_vb=
 (which may be the reason why we have to turn visual bells on to achieve all
 bells off...)
 
-![Vimrc No Beeps](screenshots/vimrc-no-beeps.png)
+![Vimrc No Beeps](/screenshots/vimrc-no-beeps.png)
 
 ---
 ## Dotfiles

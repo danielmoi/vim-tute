@@ -19,7 +19,7 @@ colorscheme solarized
 ```
 
 
-![Vimrc Color Theme](screenshots/vimrc-color-theme.png)
+![Vimrc Color Theme](/screenshots/vimrc-color-theme.png)
 
 ## Reload
 Now we need to save, reload, and run PlugInstall
@@ -36,7 +36,7 @@ Then, we need to reload Vim using our updated `.vimrc`
 
 We will get this error, but that's okay - we know that we haven't installed that plugin yet.
 
-![Missing color scheme](screenshots/vimrc-color-scheme-error.png)
+![Missing color scheme](/screenshots/vimrc-color-scheme-error.png)
 
 We can dismiss that with `<Enter>`.
 
@@ -47,7 +47,7 @@ Now, let's get VimPlug to install our color theme plugin!
 
 We should see this success window:
 
-![Vim PlugInstall success](screenshots/vim-plug-install-finished.png)
+![Vim PlugInstall success](/screenshots/vim-plug-install-finished.png)
 
 Finally, we need to reload `.vimrc` again:
 ```
@@ -56,4 +56,4 @@ Finally, we need to reload `.vimrc` again:
 
 Voila!
 
-![Vim Solarized Color Scheme](screenshots/vim-solarized.png)
+![Vim Solarized Color Scheme](/screenshots/vim-solarized.png)

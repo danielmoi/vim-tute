@@ -39,7 +39,7 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 ```
 
-![Vim Plug setup](screenshots/vim-plug-setup.png)
+![Vim Plug setup](/screenshots/vim-plug-setup.png)
 
 Now we need to save and reload vim with our new config
 ```
@@ -59,7 +59,7 @@ We get this message:
 No plugin to install
 ```
 
-![Vim Plug Install](screenshots/vim-plug-install.png)
+![Vim Plug Install](/screenshots/vim-plug-install.png)
 
 This is fine! We will be installing plugins in the section.
 
@@ -76,7 +76,7 @@ Vim displays all the commands for `vim-plug` (which all start with `Plug`):
 Plug PlugClean PlugDiff
 ```
 
-![Tab completion for Plug](screenshots/tab-completion-plug.png)
+![Tab completion for Plug](/screenshots/tab-completion-plug.png)
 
 
 ----
@@ -92,7 +92,7 @@ As a reminder, here is a mapping of the keystrokes and their effect:
                      <Enter>  Execute PlugStatus
 ```
 
-![Vim Plug Status](screenshots/vim-plug-status.png)
+![Vim Plug Status](/screenshots/vim-plug-status.png)
 
 
 We can close that status window by pressing `q` (abbreviation for quit).
@@ -101,6 +101,6 @@ We can close that status window by pressing `q` (abbreviation for quit).
 ## Tidy `.vimrc`
 Let's add some comments and compartmentalize our `.vimrc`
 
-![Vimrc Tidy](screenshots/vim-plug-tidy.png)
+![Vimrc Tidy](/screenshots/vim-plug-tidy.png)
 
 

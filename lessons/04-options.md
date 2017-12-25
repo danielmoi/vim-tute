@@ -25,7 +25,7 @@ Now let's turn line numbers on!
 
 Hello line numbers!
 
-![Line Numbers](screenshots/line-numbers.png)
+![Line Numbers](/screenshots/line-numbers.png)
 
 What we just did was change an OPTION.
 
@@ -52,7 +52,7 @@ Let's tell Vim that our terminal has a dark background so it can adjust its colo
 :set background=dark
 ```
 
-![Color groups for dark background](screenshots/background-dark.png)
+![Color groups for dark background](/screenshots/background-dark.png)
 
 There's not much of a change with our current screen (for example, there is no code with syntax
 highlighting).

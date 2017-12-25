@@ -75,4 +75,4 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 
 Here's a Gif to demonstrate:
 
-![Moving lines](screenshots/moving-lines.gif)
+![Moving lines](/screenshots/moving-lines.gif)

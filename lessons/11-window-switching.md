@@ -2,10 +2,10 @@
 You have probably already run into the issue of being unable to "get back" to your file.
 
 Probably when using Help (the cursor is in the Help section, how do I move it back to my file?):
-![Vim windows vertical](screenshots/vim-windows-vertical.png)
+![Vim windows vertical](/screenshots/vim-windows-vertical.png)
 
 Or when using NERDTree (the cursor is in NERDTree, how do I move it back to my file?):
-![Vim windows horizontal](screenshots/vim-windows-horizontal.png)
+![Vim windows horizontal](/screenshots/vim-windows-horizontal.png)
 
 
 This situation is called "window switching" in Vim.

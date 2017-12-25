@@ -45,7 +45,7 @@ boolean OPTION `list` to "on":
 :set list
 ```
 
-![Highlight List On](screenshots/highlight-list.png)
+![Highlight List On](/screenshots/highlight-list.png)
 
 We can see that `--->>    >` has appeared.
 
@@ -56,7 +56,7 @@ This is a comma-separated list of string settings: `chartype1:chardisplay1,`
 ```
 set listchars=space:.,eol:¬,trail:.,tab:>.
 ```
-![Highlight listchars](screenshots/highlight-listchars.png)
+![Highlight listchars](/screenshots/highlight-listchars.png)
 
 
 We can see that:
@@ -73,7 +73,7 @@ highlight NonText guifg=#ffffff ctermfg=200
 
 We can see all the `NonText` characters in pink:
 
-![Highlight listchars NonText](screenshots/highlight-listchars-nontext.png)
+![Highlight listchars NonText](/screenshots/highlight-listchars-nontext.png)
 
 ---
 ## SpecialKey characters
@@ -82,7 +82,7 @@ Now let's some more colors so we can see the `SpecialKey` characters:
 highlight SpecialKey ctermfg=51
 ```
 We can see all the `SpecialKey` characters in cyan:
-![Highlight listchars SpecialKey](screenshots/highlight-listchars-specialkey.png)
+![Highlight listchars SpecialKey](/screenshots/highlight-listchars-specialkey.png)
 
 ---
 ## Summary
@@ -93,5 +93,5 @@ set listchars=space:.,eol:¬,trail:.,tab:>.
 highlight NonText ctermfg=238
 highlight SpecialKey ctermfg=238
 ```
-![Highlight listchars gray](screenshots/highlight-listchars-gray.png)
+![Highlight listchars gray](/screenshots/highlight-listchars-gray.png)
 

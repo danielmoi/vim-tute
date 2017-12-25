@@ -9,7 +9,7 @@ This can be abbreviated:
 ```
 :he
 ```
-![Help screen](screenshots/vim-help.png)
+![Help screen](/screenshots/vim-help.png)
 
 We navigate inside the help documents using regular Vim motions,
 (such as `j` for next line, `<CTRL-F>` for page down, and so on).
@@ -17,7 +17,7 @@ We navigate inside the help documents using regular Vim motions,
 Note also that help opens in a separate WINDOW - our previous file (`No Name`) is still there!
 
 This can be visualized a bit easier if we extend the height of our terminal:
-![Vim taller](screenshots/vim-taller.png)
+![Vim taller](/screenshots/vim-taller.png)
 
 We can make the help file the ONLY window visible with `only`:
 
@@ -30,7 +30,7 @@ We can also combine commands in the Command Line using the `|` operator:
 :he | only
 ```
 
-![Vim Help as only window](screenshots/vim-only.png)
+![Vim Help as only window](/screenshots/vim-only.png)
 
 ----
 ## Help for specific topics

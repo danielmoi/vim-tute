@@ -13,7 +13,7 @@ $ vim hello.md
 ```
 
 We have now opened that file inside Vim, and you should see something like this:
-![Open empty file](screenshots/edit-start.png)
+![Open empty file](/screenshots/edit-start.png)
 
 Things to note:
 - the file name is displayed in the Message Line - "hello.md"
@@ -29,7 +29,7 @@ This means that we can't enter any text.
 Let's enter Insert mode.
 Press "i"
 
-![Enter insert mode](screenshots/edit-insert.png)
+![Enter insert mode](/screenshots/edit-insert.png)
 
 Things to note:
 - Command line displays "--INSERT--", indicating that we are now in Insert Mode.
@@ -44,7 +44,7 @@ Hello there!
 Happy days with Vim.
 ```
 
-![Enter text in insert mode](screenshots/edit-text-insert.png)
+![Enter text in insert mode](/screenshots/edit-text-insert.png)
 
 
 ## Normal Mode
@@ -54,7 +54,7 @@ First, we need to exit Insert mode, and re-enter Normal mode.
 
 Press `<Esc>`
 
-![Normal Mode](screenshots/edit-text-normal.png)
+![Normal Mode](/screenshots/edit-text-normal.png)
 
 Things to note:
 - The Command Line now shows nothing - we are now in Normal Mode!
@@ -73,7 +73,7 @@ Press `<Enter>`
 
 
 We should see something like:
-![File saved](screenshots/edit-saved.png)
+![File saved](/screenshots/edit-saved.png)
 
 We have now saved our file!
 

@@ -14,7 +14,7 @@ Let's open Vim's File Explorer window:
 
 You should see something similar to this:
 
-![File Explorer](screenshots/vim-netrw.png)
+![File Explorer](/screenshots/vim-netrw.png)
 
 
 This is the Netrw plugin that ships with Vim and is the default filebrowser.
@@ -33,7 +33,7 @@ Let's add NERDTree to our list of plugins:
 ```
 Plug 'scrooloose/nerdtree'
 ```
-![Vimrc for NERDTree](screenshots/vimrc-nerdtree.png)
+![Vimrc for NERDTree](/screenshots/vimrc-nerdtree.png)
 
 
 Again, we need to save, reload, run :PlugInstall, and reload again.
@@ -44,7 +44,7 @@ Now, we can open NERDTree:
 ```
 
 You should see something similar to this:
-![NERDTree](screenshots/vim-nerdtree.png)
+![NERDTree](/screenshots/vim-nerdtree.png)
 
 My current directory is the Git repo for this tutorial - you should see the directory
 tree for _your_ current directory.
