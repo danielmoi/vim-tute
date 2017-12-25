@@ -1,4 +1,9 @@
 {
   "editor.wordWrap": "wordWrapColumn",
-  "editor.wordWrapColumn": 80
+  "editor.wordWrapColumn": 80,
+  "files.associations": {
+    "*.css": "scss",
+    "*.jsx": "javascriptreact",
+    "vimrc*": "viml"
+  }
 }

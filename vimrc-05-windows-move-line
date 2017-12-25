@@ -1,0 +1,84 @@
+" === PLUGINS =========================================
+call plug#begin('~/.vim/plugged')
+
+" List of plugins here
+" :w to save this file
+" :so % to reload vim with this config file
+" :PlugInstall to install plugins
+
+Plug 'altercation/vim-colors-solarized'
+Plug 'scrooloose/nerdtree'
+
+call plug#end()
+
+" -----------------------------------------------
+" Setup
+" -----------------------------------------------
+
+" === SETTINGS ========================================
+" Use the comma key as the leader
+let mapleader = ","
+
+" Show line numbers
+set number
+
+" Use color scheme for a dark terminal background
+set background=dark
+
+" Turn off all beeping and window flashing
+set noeb vb t_vb=
+
+" Use Solarized color theme
+colorscheme solarized
+
+" Better window switching
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+
+" === MOVING LINES  ====================
+" Move, in normal mode
+" :m = move
+" .+1 = current line number + 1
+" :m+1 (same as :m+) = move current line down to current line number + 1
+" == re-indents the line to suit its new position
+nnoremap <A-j> :m .+1<CR>==
+
+" move up
+" same as :m-2
+" move current line up to (current line number minus 2)
+nnoremap <A-k> :m .-2<CR>==
+
+" Move, in insert mode
+" == reindents
+" g = ?
+" i = enter insert mode again
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+
+" we can move blocks of lines too, in visual mode
+" '> = a mark that identifies the selection END
+" '< = start of selection
+" gv = reselects the last visual block
+" = reindents
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" -----------------------------------------------
+" PLUGINS
+" -----------------------------------------------
+
+" NERDTree - toggle
+map <C-n> :NERDTreeToggle<Enter>
+noremap <Leader>n :NERDTreeToggle<Enter>
+
+" NERDTree - focus
+noremap <Leader>f :NERDTreeFind<Enter>
+
+" NERDTree - show hidden files
+let NERDTreeShowHidden=1
+
+" NERDTree - close vim if NERDTree is the only thing left
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
