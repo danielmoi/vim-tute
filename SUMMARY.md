@@ -20,11 +20,12 @@
     * [Customization](lessons/10-customization.md)
     * [Window Switching](lessons/11-window-switching.md)
     * [Moving Lines](lessons/12-moving-lines.md)
-    * [Next Steps](lessons/99-next-steps.md)
+
+
+* [Next Steps](lessons/99-next-steps.md)
 
 * [Resources](resources.md)
 
-* [Coming Soon](coming-soon.md)
 
 
 Don't make the numbers consecutive? Just 00-name?

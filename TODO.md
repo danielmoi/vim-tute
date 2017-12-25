@@ -23,3 +23,7 @@
 
 
 - [ ] Add defaults and tidy lesson
+
+- [ ] Port cheatsheets over from dotfiles repo
+
+- [ ] Add download repo stuff

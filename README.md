@@ -7,11 +7,15 @@
 
 Welcome to Vim Tute!
 
-Learning to use Vim can be difficult, but this tutorial will take you through enough steps to be comfortable using Vim.
+Learning to use Vim can be difficult, but this tutorial will take you through
+enough steps to be comfortable using Vim.
 
-But why bother learning Vim?
+[_Read this tutorial as an online book_](https://danielmoi.gitbooks.io/vim-tute/)
 
-## 1. Availability
+---
+## But why bother learning Vim?
+
+### 1. Availability
 Vim is a text editor available on most machines.
 
 This is particularly useful when you need to edit / view files in situations where your
@@ -23,7 +27,7 @@ favourite code editor is not available.  Such as:
 Most of the common operations in Vim will also work in Vi, an older editor that may be the only
 editor available on some servers.
 
-## 2. Productivity
+### 2. Productivity
 Learning to use ONLY the keyboard to write and edit code will vastly increase your productivity.
 
 It is faster and more accurate to select, delete, and manipulate text using keystrokes - than it
@@ -49,7 +53,7 @@ Vim also offers a lot of shortcuts that will save you a lot of time. For example
     '3ea29c75-02df-4127-9c02-bb8a91821519')
     ```
 
-## 3. Ergonomics
+### 3. Ergonomics
 Using only the keyboard will mean that your hands won't need to move to-and-from a trackpad or mouse
 all the time. You also won't need to waste time locating where the trackpad is, or repositioning your
 hands on the keyboard after returning from the trackpad.
@@ -58,7 +62,7 @@ This all reduces the incidence of repetitive-strain injuries (RSI), and will lea
 comfortable coding experience!
 
 
-## 4. Curiosity
+### 4. Curiosity
 You probably have come across Vim before - either seeing it being used by a colleague, or spoken
 about in discussions about editor choices.
 
@@ -67,13 +71,25 @@ started?
 
 By the end of this tutorial you will be able to use Vim fairly comfortably - tick that off your To Do list!
 
+---
+## But why another tutorial on Vim?
+Yep, there are lots of tutorials out there already - and I learnt so much from reading and
+following many tutorials and articles.
+
+As I delved deeper into Vim, I took notes from my gleanings and pickings - that's one of the ways
+I learn new things. I wanted to consolidate my scattered notes into a single repository, and
+decided to turn it into a tutorial - I hope you find it helpful!
 
 ---
-[Let's get started!](00-setup.md)
+## [Let's get started!](00-setup.md)
 
 
 ---
-## License
+### License
 [Apache-2.0](LICENSE.txt)
 
 The Neovim logo by Jason Long is licensed under the Creative Commons Attribution 3.0 Unported License
+
+___
+### Acknowledgements
+[Gitbook](https://www.gitbook.com/)
