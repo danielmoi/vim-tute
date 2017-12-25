@@ -2,7 +2,8 @@
 
 Let's begin to customize Vim.
 
-We will use
+We will look at using Vim's OPTIONS to display line numbers in the editor window
+and to change the color scheme.
 
 ---
 ## Line numbers
@@ -32,7 +33,7 @@ What we just did was change an OPTION.
 Options are internal variables in Vim.
 
 There are 3 forms of options:
-1. boolean (toggle option),
+1. boolean (toggle option)
 2. number (numeric value)
 3. string (string value)
 
@@ -60,7 +61,6 @@ highlighting).
 However, the line numbers have changed color to a light gray. This is because, given a dark
 background, light gray provides better contrast than orange.
 
-----
 ----
 ## Option - Inspect value
 We can INSPECT the current value of an option with the `?` modifier.
