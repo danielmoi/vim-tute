@@ -9,6 +9,10 @@
 - suddenly made a mistake? `<Escape>`
 - there's also `u` (Undo) and `<C-r>` (Redo)
 - invest in learning how to [touch-type](https://www.typing.com)
+- practice taking notes in Vim
+  - use markdown `.md` files
+  - this removes the complexity of setting up code formatting etc
+- learn the capabilities of Vim, instead of adding plugins all the time
 
 
 ---
