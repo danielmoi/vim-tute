@@ -39,7 +39,7 @@ It definitely works though!
 I decided that I wanted to find out how those crazy commands worked. This will be one of the
 best ways to learn Vim - by _understanding_ how a solution you found works.
 
-Like a lot of "solutions" in the wiki, there are explanations provided, and I decided to cobble
+Like a lot of solutions in the wiki, there are explanations provided, and I decided to cobble
 together my own annotations for my own `.vimrc`, ending up with this:
 
 

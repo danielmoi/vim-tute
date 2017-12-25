@@ -22,10 +22,9 @@
     * [Moving Lines](12-moving-lines.md)
     * [Next Steps](99-next-steps.md)
 
-* [Cheatsheet](cheatsheet.md)
+* [Resources](resources.md)
 
-* [Further Reading](further-reading.md)
-
+* [Coming Soon](coming-soon.md)
 
 
 Don't make the numbers consecutive? Just 00-name?
