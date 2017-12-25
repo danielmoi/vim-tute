@@ -1,8 +1,11 @@
 # Coming Soon
 
 - [ ] Buffers and tabs
+
 - [ ] Syntax highlighting
-- [ ] Move things into directories / tidy up
+
+- [x] Move things into directories / tidy up [171225]
+
 - [ ] Explain the plugins
   - Plug 'kien/ctrlp.vim' " 170825
   - Plug 'tpope/vim-fugitive' " 170825
@@ -17,3 +20,6 @@
 
   - Plug 'flazz/vim-colorschemes' " Color schemes [170924]
   - Plug 'editorconfig/editorconfig-vim' " Editor config [170925]
+
+
+- [ ] Add defaults and tidy lesson

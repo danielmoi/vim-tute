@@ -91,7 +91,7 @@ zb        Scroll current line to Bottom of screen
 
 ----
 ## Exercise
-Open up `exercises/02-navigation.md` and navigate around the maze, using only keystrokes!
+Open up `/exercises/02-navigation.md` and navigate around the maze, using only keystrokes!
 
 
 
