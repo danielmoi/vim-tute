@@ -75,10 +75,9 @@ Now, with our leader key all set up, add the following lines to our `.vimrc`:
 " === NERDTree ==================================
 " Toggle NERDTreeToggle
 map <C-n> :NERDTreeToggle<Enter>
-noremap <Leader>n :NERDTreeToggle<Enter>
 
 " Focus NERDTree
-noremap <Leader>f :NERDTreeFind<Enter>
+noremap <Leader>n :NERDTreeFocus<Enter>
 
 " show hidden files
 let NERDTreeShowHidden=1

@@ -33,7 +33,7 @@ colorscheme solarized
 map <C-n> :NERDTreeToggle<Enter>
 
 " Focus NERDTree
-noremap <Leader>n :NERDTreeFind<Enter>
+noremap <Leader>n :NERDTreeFocus<Enter>
 
 " show hidden files
 let NERDTreeShowHidden=1
