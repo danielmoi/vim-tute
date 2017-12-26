@@ -72,10 +72,9 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 
 " NERDTree - toggle
 map <C-n> :NERDTreeToggle<Enter>
-noremap <Leader>n :NERDTreeToggle<Enter>
 
 " NERDTree - focus
-noremap <Leader>f :NERDTreeFind<Enter>
+noremap <Leader>n :NERDTreeFind<Enter>
 
 " NERDTree - show hidden files
 let NERDTreeShowHidden=1

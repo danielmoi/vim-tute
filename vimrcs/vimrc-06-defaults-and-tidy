@@ -193,10 +193,9 @@ set wildignore+=**/node_modules,**/coverage
 " -----------------------------------------------
 " NERDTree - toggle
 map <C-n> :NERDTreeToggle<Enter>
-noremap <Leader>n :NERDTreeToggle<Enter>
 
 " NERDTree - focus
-noremap <Leader>f :NERDTreeFind<Enter>
+noremap <Leader>n :NERDTreeFind<Enter>
 
 " NERDTree - show hidden files
 let NERDTreeShowHidden=1
