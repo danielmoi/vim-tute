@@ -1,42 +1,9 @@
 # General vim tips
 
-## Quit
-:q    Quit
-:q!   Force quit (no saving)
-:w    Write (save)
-:wq   Write Quit (Save and Quit)
-
-:lclose   Close the "location list" for the current window
-          The lint errors window for Syntastic is a location list
-          The location list is a window-local variant of the Quickfix List
-
 
 -----------------------------------------------------------------------
-## File Explorer
-:Explore  This is the built-in file explorer! [171112]
-
-We can also install a plugin, such as NERDTree
 
 -----------------------------------------------------------------------
-## Terms
-Buffer    An in-memory representation of a document
-          May not correspond to that file "on disk"
-          A buffer is a file loaded into memory for editing
-          The original file remains unchanged until you write the buffer to the file
-
-Window    A viewport on a buffer
-          One buffer can have many many windows
-          When we do :q, we are actually quitting the current WINDOW
-
-
-Tab Page  A collection of windows
-
-Tab       Another tab in the terminal.
-
-Buffer States
-1. Active     :buffers shows 'a'
-2. Hidden     :buffers shows 'h'
-3. Inactive   :buffers shows ' '
 
 -----------------------------------------------------------------------
 ## Motion
@@ -73,12 +40,6 @@ SHIFT+3   Search backward
 n         Next, forward
 N         Next, backward
 
------------------------------------------------------------------------
-## Modes
-Normal Mode         the characters you type are commands
-Insert Mode         the characters you type are inserted as text
-Visual mode         motion commands extend the highlighted selection
-Command line mode   enter characters into the command line at the bottom of the window
 
 -----------------------------------------------------------------------
 ## Options
