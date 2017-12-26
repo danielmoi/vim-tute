@@ -9,9 +9,22 @@ NB. these commands are called Motion commands, and are for use in Normal Mode.
 Remember, pressing `<Esc>` will always switch the current mode to Normal Mode.
 
 ---
+## Practice Folder
+First, we need to create an empty folder for our Vim practice.
+
+Do that wherever you want, and `cd` into it.
+
+```
+$ mkdir hello-vim
+$ cd hello-vim
+```
+
+---
 ## By character
-Instead of using the arrow keys, Vim uses the `h`, `j`, `k`, and `l` keys to move the cursor by
-one character. These are "character" Motion commands.
+To move the cursor over by _1 character_, instead of using the arrow keys,
+Vim uses the `h`, `j`, `k`, and `l` keys.
+
+These are "character" Motion commands.
 
 Here's a visualization of these key mappings:
 ```
@@ -48,8 +61,9 @@ Yet another visualization:
 
 ----
 ## By word
-Instead of pressing and holding down `l` to move right a bunch of characters, there are "word"
-Motion commands.
+To move the cursor over by _1 word_, there are "word" Motion commands.
+
+This is instead of holding down the left or right "character" Motion keys (`h` or `l`).
 
 NB. these will take us to the beginning of the word
 ```
@@ -64,7 +78,10 @@ e         end of word
 
 ---
 ## By page
-Instead of using the scroll wheel on the mouse, or a trackpad, there are "page" Motion commands.
+To move the cursor up or down by _1 page_, there are "page" Motion commands.
+
+This is instead of using the scroll wheel on the mouse, or a trackpad.
+
 ```
 CTRL-F    Forward one page
 CTRL-B    Back one page

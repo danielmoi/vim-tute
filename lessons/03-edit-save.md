@@ -2,7 +2,6 @@
 
 Let's start by creating a file, writing some text, and saving the file!
 
-
 ## Open file
 We can open a new file with the name `hello.md`.
 
