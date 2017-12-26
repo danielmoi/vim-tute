@@ -103,7 +103,8 @@ autocmd FileType nerdtree setlocal nolist
 nmap <Leader>l :set list!<CR>
 
 " Clear search highlighting on pressing ESC
-nnoremap <ESC> :nohlsearch<CR><ESC>
+" CTRL-l clears and redraws screen (remove :nohlsearch from command line)
+nnoremap <ESC> :nohlsearch<CR><C-l>
 
 " -----------------------------------------------
 " WINDOWS
