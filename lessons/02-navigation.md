@@ -108,7 +108,18 @@ zb        Scroll current line to Bottom of screen
 
 ----
 ## Exercise
-Open up `/exercises/02-navigation.md` and navigate around the maze, using only keystrokes!
+To practice our navigation commands, we need to grab the `/exercises/02-navigation.md` file
+from the repository for this tutorial.
+
+Make sure you're in the `hello-vim` directory, and let's use `curl` to fetch that file.
+```
+curl -LO https://raw.githubusercontent.com/danielmoi/vim-tute/master/exercises/02-navigation.md
+```
+
+Open that file and navigate the path, using only keystrokes!
+```
+$ vim 02-navigation.md
+```
 
 
 

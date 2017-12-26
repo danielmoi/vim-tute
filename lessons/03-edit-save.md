@@ -5,8 +5,7 @@ Let's start by creating a file, writing some text, and saving the file!
 ## Open file
 We can open a new file with the name `hello.md`.
 
-Note that this hasn't been written to disk yet (hello.md hasn't been saved).
-
+Inside our `hello-vim` folder:
 ```
 $ vim hello.md
 ```
@@ -18,6 +17,7 @@ Things to note:
 - the file name is displayed in the Message Line - "hello.md"
 - the file details are displayed in the Command Line - there are zero lines (`0L`) and zero
 characters (`0C`)
+- this file has not been "saved to disk" yet - we haven't saved `hello.md` yet
 
 
 ---
