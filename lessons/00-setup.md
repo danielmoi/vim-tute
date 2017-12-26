@@ -1,11 +1,5 @@
 # Setup
 
-## Git repo
-Clone the tutorial repository from https://github.com/danielmoi/vim-tute
-
-There's an [exercises](/exercises) folder that will be referenced in some lessons.
-
----
 ## Vim > Neovim
 Vim comes pre-installed in most distributions of Linux and on MacOS. However, I would recommend using Neovim instead.
 
