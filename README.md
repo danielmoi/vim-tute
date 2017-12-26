@@ -13,10 +13,19 @@ enough steps to be comfortable using Vim.
 [_Read this tutorial as an online book_](https://danielmoi.gitbooks.io/vim-tute/)
 
 ---
+## What is Vim?
+Vim is a text editor that runs inside the terminal.
+
+It stands for Vi IMproved (Vi is another text editor that predates Vim).
+
+It's written as a proper noun ("Vim", and not "vim").
+
+
+---
 ## But why bother learning Vim?
 
 ### 1. Availability
-Vim is a text editor available on most machines.
+Vim is available on most machines.
 
 This is particularly useful when you need to edit / view files in situations where your
 favourite code editor is not available.  Such as:

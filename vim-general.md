@@ -1,11 +1,5 @@
 # General vim tips
 
------------------------------------------------------------------------------------------
-## Background
-Vim stands for Vi IMproved
-It's written as a proper noun
-
------------------------------------------------------------------------
 ## Quit
 :q    Quit
 :q!   Force quit (no saving)
