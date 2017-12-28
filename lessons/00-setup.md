@@ -47,3 +47,4 @@ On MacOS, open System Preferences > Keyboard > Modifier Keys...
 
 Then, change the mapping for Caps Lock key to Escape.
 
+![Map Caps Lock to Escape](/screenshots/map-caps-lock-to-escape.png)
