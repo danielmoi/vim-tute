@@ -14,6 +14,7 @@
   - this removes the complexity of setting up code formatting etc
 - learn the capabilities of Vim, instead of adding plugins all the time
 
+- navigation is about the CURSOR position, relative to the PAGE (current view port on the file)
 
 ---
 ## Resources

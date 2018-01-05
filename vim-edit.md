@@ -1,8 +1,13 @@
 # Editing
 
-## Nav + Edit
-A     end of line, and add cursor after
+## Edit - by character
+i     enter insert mode, at current cursor position
 a     enter insert mode, AFTER current cursor position
+
+## Motion + Edit - by line position
+```
+A     end of line, and enter Insert Mode (Append text at end of line
+I         First character of line, and enter insert mode
 
 o     add new line, and enter insert mode
 O     add new line BEFORE, and enter insert mode

@@ -6,116 +6,64 @@
 -----------------------------------------------------------------------
 
 -----------------------------------------------------------------------
-## Motion
+## Motion - by character
+```
 h         left
 j         down
 k         up
 l         right
+```
 
+## Motion - by word
+```
+w         Forward, start of next
+b         Back, start of previous word
+
+e         End of current word
+```
+
+## Motion - by page
 CTRL-F    Forward 1 page
 CTRL-B    Back 1 page
-zz        Scroll the current cursor position to the middle of the page
-z<CR>     Scroll the current cursor to the top
-CTRL+E    Scroll down 1 line [171108]
-CTRL+Y    Scroll up 1 line [171108]
 
+
+## Motion - by file position
 gg        Go to top of page
 G         Go to bottom of page
 7G        Go to line 7
 
-w         Forward, start of next
-e         Forward, End of next word
-b         Back, start of previous word
+## Motion - by scroll
+zz        Scroll the current cursor position to the middle of the page
+z<CR>     Scroll the current cursor to the top
+zt
+zb        Scroll cursor to the bottom of screen
 
+CTRL+E    Scroll down 1 line [171108]
+CTRL+Y    Scroll up 1 line [171108]
+
+
+
+## Motion - by line position
+```
 0         First character of line
 ^         First non-blank character of line
-I         First character of line, and enter insert mode
 
 $         End of line
-A         End of line, and enter insert mode (Append text at end of line)
+```
 
-SHIFT+8   Search forward
-SHIFT+3   Search backward
+## Motion - by search
 
-n         Next, forward
-N         Next, backward
+```
+*         Search forward to next occurrence of word under cursor
+SHIFT+8
+n         next
+
+#         Search backward
+SHIFT+3
+N         Next (backward)
+```
 
 
------------------------------------------------------------------------
-## Options
-Options are the internal variables and switches in Vim which can be set to
-achieve special effects.
-
-We change options with the keyword SET.
-We inspect options by appending "?"
-
-:set              Show all options that differ from their default value
-:set showcmd?     show current value of option
-:set showcmd      Toggle option: set, switch it on; Number/String option: show value
-:set showcmd!     set current value to toggled value (invert)
-:set no{option}   set option to off
-:set {option}&    Set option to default value
-
-:set pokemon?     E518: Unknown option: pokemon
-                  "pokemon" is not a vim option
-
-:set number=30    E474: Invalid argument: number=yes
-                  "30" is not a valid value for the option "number"
-
------------------------------------------------------------------------
-## Environment Variables
-[170926]
-
-$HOME         Full path to home directory
-
-$VIM          Full path to where Vim is installed
-
-$MYVIMRC      Full path to .vimrc file (if .vimrc exists)
-              Empty is no .vimrc
-
-$TERM         Type of terminal
-              xterm-256color
-              xterm (probably limited to 8 colors)
-
------------------------------------------------------------------------
-## Variables
-[170910]
-Variables hold values for various settings / options. They are used by the user and plugins.
-
-We change variables with the keyword LET.
-We inspect variables with :echo
-
-:let {var}={value}    Create internal variable
-:unlet {var}          Remove internal variable
-
-Prefixes
-g: global-variable    global
-b: buffer-variable    local to the current buffer
-w: window-variable    local to the current window
-t: tabpage-variable   local to the current tab page
-l: local-variable     local to a function
-s: script-variable    local to a |:source|'ed Vim script
-a: function-argument  function argument (only inside a function)
-v: vim-variable       global, pre-defined by Vim
-
-Note:
-If the namespace is not specified, then the global namespace is used
-Inspect variables with :echo (not :e, which is edit)
-
-Examples:
-:let pokemon=1000     Create global variable pokemon, and assign it the value 1000
-:echo pokemon         1000
-:echo g:pokemon       1000
-:echo w:pokemon       E121: Undefined variable: w:pokemon
-                      E15: Invalid expression: w:pokemon
-
-:let w:lemmings=2      Create a variable "lemmings", local to the current window
-:echo lemmings         1000 (the global variable)
-:echo w:lemmings       2 (the window variable)
-
-:echo syntastic_check_on_open       #1 will print out (it is on)
-:echo g:delimitMate_expand_cr       same as :ec delimitMate_expand_cr
-:echo g:de <Tab>                    can also do tab completion with this
 
 -----------------------------------------------------------------------
 ## Key mapping
