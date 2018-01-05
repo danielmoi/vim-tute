@@ -1,6 +1,7 @@
 # Coming Soon
 
 ## Figure these out
+- [ ] AUTOSAVE [171229]
 - [ ] Buffers and tabs
 - [ ] Editorconfig
 - [x] Don't match " when in vim [170827]

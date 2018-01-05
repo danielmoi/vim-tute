@@ -1,6 +1,13 @@
 # Vim Command Line
 
 
+## Command Line Completion
+In the command line, `<CTRL-D>` will list names that match the pattern in
+front of the cursor.
+
+The help tag for this is `c_CTRL-D`
+
+For example:
 ```
 :he list<CTRL-D>
 ```
@@ -15,16 +22,6 @@ list-index
 'listchars'
 ```
 
-`:list` refers to the command line command
-```
-:list
-```
+`:list` refers to the Command Line COMMAND `list`
 
 `'list'` refers to the Vim OPTION 'list'
-```
-:set list?
-:set list!
-:set list
-:set nolist
-```
-
