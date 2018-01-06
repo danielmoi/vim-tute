@@ -25,3 +25,13 @@
 * [Next Steps](lessons/99-next-steps.md)
 
 * [Resources](resources.md)
+
+* Cheatsheets / Tips
+    * [Glossary](/vim-glossary.md)
+    * [File commands](/vim-io.md)
+    * [Motion commands](/vim-motion.md)
+    * [Edit commands](/vim-edit.md)
+    * [Command Line commands](/vim-command-line.md)
+    * [Using Vim Help](/vim-help.md)
+    * [Vimrc tips](/vim-vimrc.md)
+
