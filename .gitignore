@@ -10,3 +10,5 @@
 *.shada
 *.swap
 *.netrwhist
+
+.notes/ln-vimrc

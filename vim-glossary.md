@@ -8,15 +8,36 @@ Buffer    An in-memory representation of a document
           The original file remains unchanged until you write the buffer to the file
 
 Window    A viewport on a buffer
-          One buffer can have many many windows
+          One buffer can have many windows (many viewports)
           When we do :q, we are actually quitting the current WINDOW
 
 
 Tab Page  A collection of windows
 
-Tab       Another tab in the terminal.
+Tab       Another tab in the terminal
+          Not a Vim feature, strictly speaking
+```
+---
+Example: Tabs
+- there are 2 terminal tabs open
+- the focused tab is a Vim Tab Page (described below)
 
-Buffer States
+![Tabs](/screenshots/buffers-tabs-labelled.png)
+
+---
+Example: a Tab Page
+- there are 3 windows open
+- "Window 1" and "Window 2" are windows (viewports) on the same BUFFER (for `file-1.md`)
+- "Window 3" is a window (viewport) on another BUFFER (for `file-2.md`)
+
+![Tab Page](/screenshots/buffers-windows-labelled.png)
+
+
+
+
+## Buffer States
+
+```
 1. Active     :buffers shows 'a'
 2. Hidden     :buffers shows 'h'
 3. Inactive   :buffers shows ' '
@@ -26,10 +47,10 @@ Buffer States
 ---
 ## Modes
 ```
-Normal Mode         the characters you type are commands
-Insert Mode         the characters you type are inserted as text
-Visual Mode         motion commands extend the highlighted selection
-Command Mode        enter characters into the command line at the bottom of the window
+Normal Mode         the characters typed are executed as commands
+Insert Mode         the characters typed are inserted as text
+Visual Mode         the motion commands typed create a highlighted selection
+Command Mode        the characters typed appear in the Command Line at the bottom of the window
 ```
 
 
@@ -66,19 +87,20 @@ $MYVIMRC      Full path to .vimrc file (if .vimrc exists)
 Options are special internal variables and switches in Vim
 They can be set to achieve special effects.
 
-We change options with the keyword SET.
+We change options with the keyword `set`.
+
 We inspect options by appending "?"
 
 ```
 :set              Show all options that differ from their default value
-:set showcmd?     show current value of option
-:set showcmd      Toggle option: set, switch it on; Number/String option: show value
-:set showcmd!     set current value to toggled value (invert)
-:set no{option}   set option to off
-:set {option}&    Set option to default value
+:set number?      Show current value of option
+:set number       Toggle option: set, switch it on; Number/String option: show value
+:set number!      Set current value to toggled value (invert)
+:set no{number}   Set option to off
+:set {number}&    Set option to default value
 
 :set pokemon?     E518: Unknown option: pokemon
-                  "pokemon" is not a vim option
+                  "pokemon" is not a Vim option
 
 :set number=30    E474: Invalid argument: number=yes
                   "30" is not a valid value for the option "number"
@@ -91,41 +113,42 @@ They are only accessible within Vim.
 
 Variables hold values for various settings / options. They are used by the user and plugins.
 
-We change variables with the keyword LET.
-We inspect variables with :echo
+We change variables with the keyword `let`.
+
+We inspect variables with `:echo`
 
 ```
-:let {var}={value}    Create internal variable
-:unlet {var}          Remove internal variable
+:let {var}={value}    Create variable
+:unlet {var}          Remove variable
 
-Prefixes
-g: global-variable    global
-b: buffer-variable    local to the current buffer
-w: window-variable    local to the current window
-t: tabpage-variable   local to the current tab page
-l: local-variable     local to a function
-s: script-variable    local to a |:source|'ed Vim script
-a: function-argument  function argument (only inside a function)
-v: vim-variable       global, pre-defined by Vim
+Prefixes (and their SCOPE)
+g: global-variable    Global scope
+b: buffer-variable    Local scope - to the current buffer
+w: window-variable    Local scope - to the current window
+t: tabpage-variable   Local scope - to the current tab page
+l: local-variable     Local scope - to a function
+s: script-variable    Local scope - to a |:source|'ed Vim script
+a: function-argument  Function scope - only accessible inside a function
+v: vim-variable       Global scope, pre-defined by Vim
 ```
 
 Note:
 If the namespace is not specified, then the global namespace is used
-Inspect variables with :echo (not :e, which is edit)
 
+---
 Examples:
 ```
-:let pokemon=1000     Create global variable pokemon, and assign it the value 1000
+:let pokemon=1000     Create global variable "pokemon", and assign it the value 1000
 :echo pokemon         1000
 :echo g:pokemon       1000
 :echo w:pokemon       E121: Undefined variable: w:pokemon
                       E15: Invalid expression: w:pokemon
 
-:let w:lemmings=2      Create a variable "lemmings", local to the current window
-:echo lemmings         1000 (the global variable)
-:echo w:lemmings       2 (the window variable)
+:let w:pokemon=2      Create a local variable "pokemon", scoped to the current window
+:echo pokemon         1000 (the global variable)
+:echo w:pokemon       2 (the window variable)
 
-:echo syntastic_check_on_open       #1 will print out (it is on)
-:echo g:delimitMate_expand_cr       same as :ec delimitMate_expand_cr
-:echo g:de <Tab>                    can also do tab completion with this
+:echo syntastic_check_on_open       "1" will print out in the Command Line (it is "ON")
+:echo g:syntastic_check_on_open     same as :echo syntastic_check_on_open
+:echo g:syn<Tab>                    Remember that we can always perform Tab Completion
 ```
