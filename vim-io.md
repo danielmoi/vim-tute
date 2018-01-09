@@ -3,14 +3,20 @@
 ## Quit
 ```
 :q    Quit
-:q!   Force quit (no saving)
+:q!   Force quit (without saving)
+
+:qa   Quit all
+:qa!  Force quit all (without saving)
+```
+
+## Save
+```
 :w    Write (save)
 :wq   Write Quit (Save and Quit)
 
-:lclose   Close the "location list" for the current window
-          The lint errors window for Syntastic is a location list
-          The location list is a window-local variant of the Quickfix List
+:wa   Write all (Save all)
 ```
+
 
 ## File Explorer
 ```
