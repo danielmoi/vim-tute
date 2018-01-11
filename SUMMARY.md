@@ -32,6 +32,7 @@
     * [Motion commands](/vim-motion.md)
     * [Edit commands](/vim-edit.md)
     * [Command Line commands](/vim-command-line.md)
+    * [Window Management](/vim-windows.md)
     * [Using Vim Help](/vim-help.md)
     * [Vimrc tips](/vim-vimrc.md)
 
