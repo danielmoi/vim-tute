@@ -1,21 +1,25 @@
 # Editing
 
 ## Edit - by character
+```
 i     enter insert mode, at current cursor position
 a     enter insert mode, AFTER current cursor position
+```
 
 ## Motion + Edit - by line position
 ```
-A     end of line, and enter Insert Mode (Append text at end of line
-I         First character of line, and enter insert mode
+A     go to end of line, then enter Insert Mode (Append text at end of line)
+I     go to first character of line, then enter insert mode
 
-o     add new line, and enter insert mode
-O     add new line BEFORE, and enter insert mode
+o     add new line, then enter Insert Mode
+O     add new line BEFORE, then enter Insert Mode
 
-ea    End of word, insert cursor after
+ea    go to End of word, insert cursor after
+```
 
 
 ## Moving around whilst in Insert mode
+```
 <C-o>     gives you one Normal command, before returning to Insert mode [170927]
 
 <C-o>A    will put cursor at the end of the line (staying in edit mode)
@@ -26,34 +30,41 @@ ea    End of word, insert cursor after
           this is <C-n> in MacOS
 
 we can also map <C-hjkl> to allow us to use these keys to navigate inside insert mode
+```
 
 
 ## Visual Mode & Selecting text
 Enter visual mode
+
 Use direction keys to modify selection
 
+```
 V       select whole line (then motion keys)
 v       select character (and then motion keys)
+
+viw     select characters Inside current Word
+```
 
 
 -------------------------------------------------------------------------
 ## Yank (Copy)
-y           yank 1 character
-y3l         yank 3 characters to the right
+```
+y           yank 1 character (the character under the current cursor position)
+y3l         yank 3 characters, to the right
 [x]y        yank n characters
 ["x]y       into
 
-y$          yank from here, to end of line, but not newline character at the end
-go to start of line, copy to end, exclude newline
+y$          yank from here, to end of line, exclude the newline character at the end
 
-yy or Y     yank current line, including the newline character at the end of the line [170828]
+Y or yy     yank current line,
+            include the newline character at the end of the line [170828]
 
 
 
 "*
 - this is clipboard access, where we are using the "* register (there is also a "+ register)
-"*Y = yank whole line to clipboard
-<S-V>, visual select, then "*y to copy selection to clipboard
+"*Y = yank whole line to the * register
+
 
 yiw = yank word, inside (no surrounding whitespace) [170828]
 yiw = yank word, around (no surrounding whitespace) [170828]
@@ -61,41 +72,58 @@ yiw = yank word, around (no surrounding whitespace) [170828]
 
 We can also do visual select
 <S-v>, and then navigate using keys to select text, and then YANK
+```
 
 
 ## Delete (Cut)
-D = cut current line, from this character, to the end
-dd = cut current line, including the newline character at the end of the line [170828]
+```
+D       cut current line, from current cursor position, to the end
+dd      cut current line, include the newline character at the end of the line [170828]
 
-x = Delete, a throwback to typewriters and having to over-write an 'x' to "delete"
-r           Replace single character (returns back to Normal mode)
+x       cut current character
+        a throwback to typewriters and having to over-write an 'x' to "delete"
 
-dt(   delete to (but not including) the first "(" character [171103]
-df(   delete to (and including) the first "(" character
+r       Replace single character (returns back to Normal mode)
+        rt = replace the current character with "t"
 
-# Paste
-p     paste below (the "default" behaviour is next line / below)
-P     paste above
-"*p   paste from the "*" register
+dt(     delete to (but not including) the first "(" character [171103]
+df(     delete to (and including) the first "(" character
+        Delete to where we Find the first "(" character
+```
+
+----
+## Paste
+```
+p       paste below (the "default" behaviour is next line / below)
+P       paste above
+"*p     paste from the "*" register
 
 (cf. o for insert on new line below, and O for insert new line above)
+```
 
 ## Example: Select 2 lines
+```
 Shift + V   Enter visual mode
 j   Increase selection down
 "*Y   Copy to clipboad
+```
 
 ## Example: Select all
+```
 ggVG  Go to top > Visual mode > Go to bottom
+```
 
 -------------------------------------------------------------------------
 ## Insert line
+```
 `o` = "open" up a new line, below
+```
 
 
 
--------------------------------------------------------------------------
+----
 # Move line
+```
 :m +1 (or :m+1, space not needed) = move line down 1 line
 :m -2 (or :m-1, space not needed) = move line up 1 line
 
@@ -109,20 +137,21 @@ ggVG  Go to top > Visual mode > Go to bottom
 Can also do this with blocks of text (select > :m +10)
 
 [170909A] Implmented <A-j> and <A-k> as mappings for these
+```
 
--------------------
+----
 
 ## Search and Replace
 [170915]
-There is the :s substitute command
+There is the `:s` substitute command
 
+```
 :%s/one/two/g         Find "one" in ALL lines, and replace with "two"
 :%s/one/two/gc        Same, but ask for confirmation
 :%s/\<one>\>/two/gc   Same, but for EXACT match
 
 :s/one/two/g          Find "one" in THIS line, and replace with "two"
 
-/-----------------------------------------------------------------------
 
 % operator
 
@@ -145,17 +174,20 @@ Here, it represents "the current file name"
 :nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 nnoremap  Non-recursive mapping in Normal mode
 <Leader>s   The key combination <Leader> and "s"
+```
 
-\-----------------------------------------------------------------------
 
 ## Replace (Change inner word)
+```
 [170915]
 ciw     change inner word = removes current word, and enters Insert mode
 ct,     change inner word to the first instance of "," [171108]
+```
 
 
 ## Change case
 [171022]
+```
 ~   Toggle case
 U   Uppercase
 u   Lowercase
@@ -172,9 +204,13 @@ Toggle case of...
 g~3w  next three words
 g~iw  current word (cursor can be anywhere in word)
 g~$   all characters, from cursor, to end to line
+```
 
 
-# Shell out
+## Shell out
+```
 :!    The next commands will be executed in the shell (terminal)
+
       :! mkdir hello
       # creates a directory called hello
+```
