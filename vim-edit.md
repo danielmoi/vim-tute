@@ -50,14 +50,17 @@ viw     select characters Inside current Word
 ## Yank (Copy)
 ```
 y           yank 1 character (the character under the current cursor position)
+
+3y          yank 3 characters
+
 y3l         yank 3 characters, to the right
-[x]y        yank n characters
 ["x]y       into
 
-y$          yank from here, to end of line, exclude the newline character at the end
+y$          yank from here, to end of line
+            EXCLUDES the newline character
 
-Y or yy     yank current line,
-            include the newline character at the end of the line [170828]
+Y or yy     yank current line
+            INCLUDES the newline character at the end of the line [170828]
 
 
 
@@ -66,12 +69,13 @@ Y or yy     yank current line,
 "*Y = yank whole line to the * register
 
 
-yiw = yank word, inside (no surrounding whitespace) [170828]
-yiw = yank word, around (no surrounding whitespace) [170828]
+yiw         yank inner word
+            inside (no surrounding whitespace) [170828]
 
+yaw         yank around word
+            around (no surrounding whitespace) [170828]
 
-We can also do visual select
-<S-v>, and then navigate using keys to select text, and then YANK
+We can also make a visual selection and then use "y" to yank
 ```
 
 
@@ -94,11 +98,14 @@ df(     delete to (and including) the first "(" character
 ----
 ## Paste
 ```
-p       paste below (the "default" behaviour is next line / below)
-P       paste above
-"*p     paste from the "*" register
+p       paste below current line
+        the "default" behaviour is always the next line / below
+        cf. "o" for insert new line below, and "O" for insert new line above
 
-(cf. o for insert on new line below, and O for insert new line above)
+P       paste above current line
+
+"*p     paste from the "*" register, above the current line
+
 ```
 
 ## Example: Select 2 lines
