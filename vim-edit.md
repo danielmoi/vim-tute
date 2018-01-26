@@ -11,8 +11,11 @@ a     enter insert mode, AFTER current cursor position
 A     go to end of line, then enter Insert Mode (Append text at end of line)
 I     go to first character of line, then enter insert mode
 
-o     add new line, then enter Insert Mode
-O     add new line BEFORE, then enter Insert Mode
+
+o     add new line, BELOW current cursor position, then enter Insert Mode
+      ("open" a new line)
+
+O     add new line ABOVE current cursor, then enter Insert Mode
 
 ea    go to End of word, insert cursor after
 ```
@@ -111,20 +114,15 @@ P       paste above current line
 ## Example: Select 2 lines
 ```
 Shift + V   Enter visual mode
-j   Increase selection down
-"*Y   Copy to clipboad
+j           Increase selection down
+"*Y         Copy to clipboad
 ```
 
 ## Example: Select all
 ```
-ggVG  Go to top > Visual mode > Go to bottom
+ggVG        Go to top > Visual mode > Go to bottom
 ```
 
--------------------------------------------------------------------------
-## Insert line
-```
-`o` = "open" up a new line, below
-```
 
 
 
