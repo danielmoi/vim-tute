@@ -36,6 +36,7 @@ we can also map <C-hjkl> to allow us to use these keys to navigate inside insert
 ```
 
 
+----
 ## Visual Mode & Selecting text
 Enter visual mode
 
@@ -49,7 +50,7 @@ viw     select characters Inside current Word
 ```
 
 
--------------------------------------------------------------------------
+----
 ## Yank (Copy)
 ```
 y           yank 1 character (the character under the current cursor position)
@@ -82,6 +83,7 @@ We can also make a visual selection and then use "y" to yank
 ```
 
 
+----
 ## Delete (Cut)
 ```
 D       cut current line, from current cursor position, to the end
@@ -93,10 +95,29 @@ x       cut current character
 r       Replace single character (returns back to Normal mode)
         rt = replace the current character with "t"
 
-dt(     delete to (but not including) the first "(" character [171103]
-df(     delete to (and including) the first "(" character
+di(     Delete characters inside matching parentheses "(" and ")"
+
+dt(     Delete characters up to (but excluding) the first "(" character [171103]
+
+df(     Delete characters up to (and including) the first "(" character
         Delete to where we Find the first "(" character
 ```
+
+----
+## Change (Replace)
+```
+ci(     Change characters inside matching parentheses "(" and ")"
+
+ciw     Change inner word
+        Remove current word, and enter Insert Mode
+        [170915]
+
+ct(     Change characters up to (but excluding) the first "("
+        [171108]
+
+cf(     Change characters up to (and excluding) the first "("
+```
+
 
 ----
 ## Paste
@@ -111,6 +132,7 @@ P       paste above current line
 
 ```
 
+----
 ## Example: Select 2 lines
 ```
 Shift + V   Enter visual mode
@@ -129,7 +151,12 @@ ggVG        Go to top > Visual mode > Go to bottom
 ----
 # Move line
 ```
-:m +1 (or :m+1, space not needed) = move line down 1 line
+:m +1     move line down 1 line
+          (or :m+1, space not needed)
+
+:m -2     move line down 1 line
+          (or :m+1, space not needed)
+
 :m -2 (or :m-1, space not needed) = move line up 1 line
 
 :m 0 = move current line to BEFORE first line
@@ -148,7 +175,7 @@ Can also do this with blocks of text (select > :m +10)
 
 ## Search and Replace
 [170915]
-There is the `:s` substitute command
+We can use the `:s` substitute command
 
 ```
 :%s/one/two/g         Find "one" in ALL lines, and replace with "two"
@@ -161,61 +188,50 @@ There is the `:s` substitute command
 % operator
 
 It can be a "range operator"
-:%s/hi/bye/g    % is a shortcut for 1,$ (line 1 to line end) (find and replace hi with bye in whole file)
+:%s/hi/bye/g    (find and replace hi with bye in whole file)
 
-we can get help for it at :help :%
+%           shortcut for 1,$ (line 1 to line end)
+            we can get help for it at :help :%
 
-It can also be a "file operator"
-Here, it represents "the current file name"
+            It can also be a "file operator"
+            Here, it represents "the current file name"
 
 :%s/\<<C-r><C-w>\>
-/         Search forward for the [count]'th occurrence of the {pattern} exclusive
-\<  \>    Ensures that the whole word is matched
-<C-r>     Insert content of any register at the cursor (whilst staying in Insert mode)
-          The next character is the name of the register (will be prompted with a "=")
-<C-w>     Following <C-r> will insert the word under the cursor
+/           Search forward for the [count]'th occurrence of the {pattern} exclusive
+\<  \>      Ensures that the whole word is matched
+<C-r>       Insert content of any register at the cursor (whilst staying in Insert mode)
+            The next character is the name of the register (will be prompted with a "=")
+<C-w>       Following <C-r> will insert the word under the cursor
 
 
 :nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
-nnoremap  Non-recursive mapping in Normal mode
+nnoremap    Non-recursive mapping in Normal mode
 <Leader>s   The key combination <Leader> and "s"
 ```
 
 
-## Replace (Change inner word)
-```
-[170915]
-ciw     change inner word = removes current word, and enters Insert mode
-ct,     change inner word to the first instance of "," [171108]
-```
 
 
+----
 ## Change case
 [171022]
 ```
-~   Toggle case
-U   Uppercase
-u   Lowercase
+~       Toggle case of character under cursor
+U       Uppercase character under cursor
+u       lowercase character under cursor
 
-Visual select, then ~/U/u
-viw~  Toggle case of current word
+viw~    Toggle case of current word
+        Visual Mode, select inner word, then ~/U/u
 
-gUU   Change current line to uppercase
-guu   Change current line to lowercase
+gUU     Change current line to uppercase
+guu     Change current line to lowercase
 
 Toggle case of...
-~     character under cursor
-3~    next three characters
-g~3w  next three words
-g~iw  current word (cursor can be anywhere in word)
-g~$   all characters, from cursor, to end to line
+~       character under cursor
+3~      next three characters
+g~3w    next three words
+g~iw    current word (cursor can be anywhere in word)
+g~$     all characters, from cursor, to end to line
 ```
 
 
-## Shell out
-```
-:!    The next commands will be executed in the shell (terminal)
-
-      :! mkdir hello
-      # creates a directory called hello
-```

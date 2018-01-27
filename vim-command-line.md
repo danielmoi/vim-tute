@@ -25,3 +25,13 @@ list-index
 `:list` refers to the Command Line COMMAND `list`
 
 `'list'` refers to the Vim OPTION 'list'
+
+
+----
+## Shell out
+```
+:!    The next commands will be executed in the shell (terminal)
+
+      :! mkdir hello
+      # creates a directory called hello
+```
