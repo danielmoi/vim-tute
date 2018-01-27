@@ -1,14 +1,17 @@
 # Editing
 
-## Edit - by character
+## Enter Insert Mode - by character
 ```
 i     enter insert mode, at current cursor position
+
 a     enter insert mode, AFTER current cursor position
 ```
 
-## Motion + Edit - by line position
+----
+## Enter Insert Mode - by line
 ```
 A     go to end of line, then enter Insert Mode (Append text at end of line)
+
 I     go to first character of line, then enter insert mode
 
 
@@ -21,7 +24,8 @@ ea    go to End of word, insert cursor after
 ```
 
 
-## Moving around whilst in Insert mode
+----
+## Navigation whilst in Insert mode
 ```
 <C-o>     gives you one Normal command, before returning to Insert mode [170927]
 
@@ -37,10 +41,9 @@ we can also map <C-hjkl> to allow us to use these keys to navigate inside insert
 
 
 ----
-## Visual Mode & Selecting text
-Enter visual mode
-
-Use direction keys to modify selection
+## Selecting Text
+1. Enter visual mode
+2. Use direction keys to modify selection
 
 ```
 V       select whole line (then motion keys)
@@ -48,35 +51,43 @@ v       select character (and then motion keys)
 
 viw     select characters Inside current Word
 ```
+## Example: Select 2 lines
+```
+Shift + V   Enter visual mode
+j           Increase selection down
+"*Y         Copy to clipboad
+```
+
+## Example: Select all
+```
+ggVG        Go to top > Visual mode > Go to bottom
+```
 
 
 ----
 ## Yank (Copy)
 ```
-y           yank 1 character (the character under the current cursor position)
+y           Yank 1 character (the character under the current cursor position)
 
-3y          yank 3 characters
+3y          Yank 3 characters
 
-y3l         yank 3 characters, to the right
+y3l         Yank 3 characters, to the right
 ["x]y       into
 
-y$          yank from here, to end of line
+y$          Yank from here, to end of line
             EXCLUDES the newline character
 
-Y or yy     yank current line
+Y or yy     Yank entire current line
             INCLUDES the newline character at the end of the line [170828]
 
+"*Y         Yank entire current line to the * register
+            "* is clipboard access, where we are using the * register
+            (there are other registers, such as the + register)
 
-
-"*
-- this is clipboard access, where we are using the "* register (there is also a "+ register)
-"*Y = yank whole line to the * register
-
-
-yiw         yank inner word
+yiw         Yank inner word
             inside (no surrounding whitespace) [170828]
 
-yaw         yank around word
+yaw         Yank around word
             around (no surrounding whitespace) [170828]
 
 We can also make a visual selection and then use "y" to yank
@@ -86,7 +97,7 @@ We can also make a visual selection and then use "y" to yank
 ----
 ## Delete (Cut)
 ```
-D       cut current line, from current cursor position, to the end
+D       cut from current cursor position to the end of the line
 dd      cut current line, include the newline character at the end of the line [170828]
 
 x       cut current character
@@ -133,49 +144,30 @@ P       paste above current line
 ```
 
 ----
-## Example: Select 2 lines
-```
-Shift + V   Enter visual mode
-j           Increase selection down
-"*Y         Copy to clipboad
-```
-
-## Example: Select all
-```
-ggVG        Go to top > Visual mode > Go to bottom
-```
-
-
-
-
-----
 # Move line
 ```
-:m +1     move line down 1 line
-          (or :m+1, space not needed)
+:m +1       Move line down 1 line
+            (or :m+1, space not needed)
+            Implmented <A-j> and <A-k> as mappings for these [170909A]
 
-:m -2     move line down 1 line
-          (or :m+1, space not needed)
+:m -2       Move line down 1 line
+            (or :m-2, space not needed)
 
-:m -2 (or :m-1, space not needed) = move line up 1 line
+:m 0        Move current line to BEFORE first line
+:m $        Move current line to AFTER last line
 
-:m 0 = move current line to BEFORE first line
-:m $ = move current line to AFTER last line
+:m 12       Move to exactly line 12 (if line 12 is below current line)
+:m 12       Move to line after line 12 (ie. line 13, if line 12 is above current line)
+            (this explains why :m -2 works; the line is above, so we need to move one line extra)
 
-:m 12 = move to exactly line 12 (if line 12 is below current line)
-:m 12 = move to line after line 12 (ie. line 13, if line 12 is above current line)
-(this explains why :m -2 works; the line is above, so we need to move one line extra)
-
-Can also do this with blocks of text (select > :m +10)
-
-[170909A] Implmented <A-j> and <A-k> as mappings for these
+Vjj:m +10   Visual Select 3 lines, then move down 10 lines
 ```
 
 ----
 
 ## Search and Replace
-[170915]
-We can use the `:s` substitute command
+
+We can use the `:s` substitute command [170915]
 
 ```
 :%s/one/two/g         Find "one" in ALL lines, and replace with "two"
@@ -214,7 +206,7 @@ nnoremap    Non-recursive mapping in Normal mode
 
 ----
 ## Change case
-[171022]
+We can use the `~` command [171022]
 ```
 ~       Toggle case of character under cursor
 U       Uppercase character under cursor
