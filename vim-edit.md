@@ -54,8 +54,8 @@ viw     select characters Inside current Word
 ## Example: Select 2 lines
 ```
 Shift + V   Enter visual mode
-j           Increase selection down
-"*Y         Copy to clipboad
+j           Increase selection down (now it is 2 lines)
+Y           Copy to clipboad
 ```
 
 ## Example: Select all

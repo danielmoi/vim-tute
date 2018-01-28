@@ -1,6 +1,6 @@
 # Vim Motion
 
-Motion commands are how we navigate the cursor in Vim.
+Motion commands are how we navigate in Vim (how we move the cursor).
 
 ## Motion - by character
 ```
@@ -35,11 +35,14 @@ G         Go to bottom of page
 ## Motion - by scroll
 ```
 zz        Scroll the current cursor position to the middle of the page
+
 z<CR>     Scroll the current cursor to the top
 zt
+
 zb        Scroll cursor to the bottom of screen
 
 CTRL+E    Scroll down 1 line [171108]
+
 CTRL+Y    Scroll up 1 line [171108]
 ```
 
