@@ -35,4 +35,5 @@
     * [Window Management](/vim-windows.md)
     * [Using Vim Help](/vim-help.md)
     * [Vimrc tips](/vim-vimrc.md)
+    * [Vim Terminal Options](/vim-terminal.md)
 

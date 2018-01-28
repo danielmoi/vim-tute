@@ -29,9 +29,25 @@ list-index
 
 ----
 ## Shell out
-```
-:!    The next commands will be executed in the shell (terminal)
+We are able to execute shell commands from inside of Vim, using the `:!` command.
 
-      :! mkdir hello
-      # creates a directory called hello
+This is the equivalent of having access to the command line inside of Vim:
 ```
+$
+```
+
+Syntax:
+```
+:!    <Shell Command>
+```
+
+Example (create a directory called hello):
+```
+:! mkdir hello
+```
+
+Equivalent to:
+```
+$ mkdir hello
+```
+

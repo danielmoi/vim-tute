@@ -18,11 +18,11 @@ Tab       Another tab in the terminal
           Not a Vim feature, strictly speaking
 ```
 ---
-Example: Tabs
+Example: Terminal Tabs vs Vim Tab Page
 - there are 2 terminal tabs open
-- the focused tab is a Vim Tab Page (described below)
+- the focused tab is split into a Vim Tab Page (described below), and another command prompt
 
-![Tabs](/screenshots/buffers-tabs-labelled.png)
+![Tabs](/screenshots/buffers-tab-page.png)
 
 ---
 Example: a Tab Page
@@ -84,7 +84,8 @@ $MYVIMRC      Full path to .vimrc file (if .vimrc exists)
 
 ---
 ## Vim Options
-Options are special internal variables and switches in Vim
+Options are special internal variables and switches in Vim.
+
 They can be set to achieve special effects.
 
 We change options with the keyword `set`.
@@ -109,6 +110,7 @@ We inspect options by appending "?"
 ---
 ## Vim Variables
 These "regular" variables are also scoped with the Vim environment [170910]
+
 They are only accessible within Vim.
 
 Variables hold values for various settings / options. They are used by the user and plugins.
