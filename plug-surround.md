@@ -12,6 +12,10 @@ ysiw"     ys = the surround command
           " = surround the word with double quotes (")
 ```
 
+yst,'     ys = the surround command
+          t, = all the characters from current cursor the the first ","
+          ' = surround that select with single quotes
+
 ## Change surroundings
 `cs` is the command ("change surroundings")
 
