@@ -105,6 +105,17 @@ zt        Scroll current line to Top of screen
 zb        Scroll current line to Bottom of screen
 ```
 
+--
+## Search / Find
+We can search for the next occurence of a word
+```
+/hello<Enter>    Move cursor to next occurrence of "hello"
+n                Move cursor to next occurrence of (current) search
+N                Move cursor to Previous occurrence of (current) search
+
+*                Move cursor to next occurrence of word under cursor
+#                Move cursor to previous occurrence of word under cursor
+```
 
 ----
 ## Exercise
