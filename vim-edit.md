@@ -118,6 +118,8 @@ d0      Delete backwards, from current cursor to start of line
 
 dB      Delete backwards, one word.
         (B is the motion command for back one word)
+
+dF(     Delete backwards, to the first occurrence of "(" (inclusive)
 ```
 
 ----
