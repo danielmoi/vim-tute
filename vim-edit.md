@@ -112,6 +112,12 @@ dt(     Delete characters up to (but excluding) the first "(" character [171103]
 
 df(     Delete characters up to (and including) the first "(" character
         Delete to where we Find the first "(" character
+
+d0      Delete backwards, from current cursor to start of line
+        Excludes current cursor
+
+dB      Delete backwards, one word.
+        (B is the motion command for back one word)
 ```
 
 ----
