@@ -70,6 +70,13 @@ $TERM         Type of terminal
               xterm (probably limited to 8 colors)
 ```
 
+We `echo` these in Vim Command Mode by referencing them with `&`:
+
+Example: echo the current working directory
+```
+:ec &pwd
+```
+
 ---
 ## Vim Environment Variables
 These variables are scoped with the Vim environment [170926]
