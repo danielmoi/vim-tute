@@ -25,8 +25,18 @@ $ vim -V
 CTRL+z
 ```
 
+This will suspend the process and return to the shell.
+
+```
+[1]  + 68941 continued  nvim
+
+[1]  + 68941 suspended  nvim
+```
+
 ## Send Vim to the foreground
 ```
 # in the command line
 $ fg
 ```
+
+This will resume (bring to foreground) your suspended vim
