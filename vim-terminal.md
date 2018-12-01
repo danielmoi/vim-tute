@@ -18,3 +18,15 @@ $ vim -u NONE
 ```
 $ vim -V
 ```
+
+----
+## Send Vim to background
+```
+CTRL+z
+```
+
+## Send Vim to the foreground
+```
+# in the command line
+$ fg
+```
