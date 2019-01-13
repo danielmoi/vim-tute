@@ -48,9 +48,10 @@ Example: a Tab Page
 ## Modes
 ```
 Normal Mode         the characters typed are executed as commands
-Insert Mode         the characters typed are inserted as text
-Visual Mode         the motion commands typed create a highlighted selection
-Command Mode        the characters typed appear in the Command Line at the bottom of the window
+Insert Mode    i    the characters typed are inserted as text
+Replace Mode   r    the characters typed are inserted as text, replacing existing text
+Visual Mode    v    the motion commands typed create a highlighted selection
+Command Mode   :    the characters typed appear in the Command Line at the bottom of the window
 ```
 
 

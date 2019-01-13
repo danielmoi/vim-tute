@@ -94,6 +94,7 @@ Here are the main modes in Vim:
 2. Insert Mode
 3. Command Mode
 4. Visual Mode
+5. Replace Mode
 
 
 ----
