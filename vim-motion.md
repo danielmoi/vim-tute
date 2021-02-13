@@ -62,7 +62,11 @@ $         End of line
 SHIFT+8
 n         next
 
-#         Search backward
+#         Search backward for previous occurrence
 SHIFT+3
 N         Next (backward)
+
+/[the]    Search forward for next occurrence of "the"
+n         next result
+N         previous result
 ```
